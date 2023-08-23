@@ -1,0 +1,30 @@
+@import '../vars';
+
+.button {
+  height: 4.6rem;
+  background: $white;
+  color: $maim-color;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  padding: 1.2rem 2.4rem;
+
+
+  &--purple {
+    background: $maim-color;
+  }
+
+  &--white {
+    color: $white;
+  }
+
+
+  //&:hover {
+  //  background:
+  //}
+}
+

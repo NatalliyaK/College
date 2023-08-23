@@ -1,0 +1,31 @@
+.news {
+  margin-top: 16rem;
+  &__information {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.42rem;
+    margin: 1rem 0;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.694rem;
+    margin-bottom: 1rem;
+  }
+
+  &__images {
+    height: 41.5rem;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: right;
+    padding-top: 4rem;
+  }
+}

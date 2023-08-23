@@ -1,0 +1,44 @@
+@import '../../vars';
+
+.specialty {
+  margin-top: 41.8rem;
+  &__information {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  &__text {
+    background: $background;
+    padding: 3rem;
+    border-radius: 1rem;
+    width: 56rem;
+  }
+
+  &__subtitle {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__number {
+    padding-bottom: 2rem;
+    color: $maim-color;
+  }
+
+  &__duration {
+    padding-bottom: 0.6rem;
+  }
+
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.4rem;
+  }
+
+  &__item {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    padding-top: 1rem;
+  }
+}

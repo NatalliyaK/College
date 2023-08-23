@@ -1,0 +1,33 @@
+@import '../../vars';
+
+.education {
+  margin-top: 16rem;
+
+  &__subtitle {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1rem;
+      left: 0;
+      width: 12.28rem;
+      height: 0.2rem;
+      background-color: $maim-color;
+    }
+  }
+
+  &__information {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin-bottom: 2rem;
+  }
+
+
+}

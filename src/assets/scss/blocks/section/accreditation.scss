@@ -1,0 +1,27 @@
+.accreditation {
+  margin-top: 16rem;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+  }
+
+  &__documentation {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__image {
+    width: 45.5rem;
+    height: 58.8rem;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: right;
+    margin-top: 2rem;
+    height: 2rem;
+    width: 11rem;
+  }
+}

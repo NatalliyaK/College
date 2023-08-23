@@ -1,0 +1,90 @@
+@import '../../vars';
+
+.about {
+  padding-top: 9.5rem;
+  height: 58rem;
+  background: $maim-color;
+
+  &__information {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    color: $white;
+    font-size: 6.4rem;
+    line-height: 7.7rem;
+  }
+
+  &__subtitle {
+    color: $white;
+    margin-top: 2rem;
+  }
+
+  &__requisition-title {
+    color: $white;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+    margin-right: 5.3rem;
+    margin-bottom: 3rem;
+  }
+
+  &__form,
+  &__form-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form {
+    gap: 3rem;
+    margin-bottom: 1.5rem;
+
+    &-element {
+      position: relative;
+    }
+  }
+
+  &__form-row {
+    gap: 2rem;
+    align-items: end;
+  }
+
+  &__agree {
+    color: $white;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+
+  &__image {
+    position: relative;
+    top: 6rem;
+    &-element {
+      height: 51.7rem;
+      width: 172rem;
+    }
+  }
+}
+.form-control {
+  width: 19rem;
+  height: 2.8rem;
+  background: $maim-color;
+  outline: none;
+  border: none;
+  border-bottom: 0.1rem solid $border;
+}
+
+.input__label {
+  position: absolute;
+  color: $text-input;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+
+  &-name {
+    right: 15.2rem;
+  }
+
+  &-tel {
+    right: 34rem;
+  }
+}

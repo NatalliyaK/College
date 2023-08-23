@@ -1,0 +1,72 @@
+@import '../vars';
+@import '../fonts';
+
+.header {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__logo-text {
+    font-size: 1.8rem;
+    margin-left: -2rem;
+    text-align: center;
+  }
+
+  &__navigation {
+    margin-top: 4rem;
+  }
+
+  &__links {
+    margin-top: 4rem;
+  }
+
+  &__navigation-list {
+    display: flex;
+    gap: 3rem;
+  }
+
+  &__navigation-item {
+    font-size: 1.8rem;
+    color: $black;
+    text-align: center;
+    line-height: 2.1rem;
+  }
+
+  &__links {
+    display: flex;
+    gap: 4rem;
+  }
+
+  &__links-phone {
+    font-size: 1.8rem;
+  }
+
+  &__svg {
+    fill: transparent;
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
+
+.tap-area {
+  position: relative;
+
+  &:before {
+    right: -0.6rem;
+    left: -0.6rem;
+    content: "";
+    position: absolute;
+    top: -5.6rem;
+    bottom: -0.6rem;
+    cursor: pointer;
+  }
+}
+
+
