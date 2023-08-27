@@ -1,0 +1,50 @@
+@import '../vars';
+
+.accessible {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.slider {
+  position: relative;
+}
+
+.arrow {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  background-color: $maim-color;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  &__item {
+    width: 0.6rem;
+    height: 1.2rem;
+    fill: transparent;
+  }
+}
+
+.arrow.left {
+  left: 2.1rem;
+}
+
+.arrow.right {
+  right: 2.1rem;
+}
+
+.arrow.right a {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+}
+
+.arrow.left a {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 50%;
+}

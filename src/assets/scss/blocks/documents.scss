@@ -1,0 +1,24 @@
+@import '../vars';
+
+.document {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 15.6rem;
+
+  &__container {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__text {
+    padding: 1.5rem 0;
+  }
+
+  &__item {
+    border-bottom: 0.1rem solid $border;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

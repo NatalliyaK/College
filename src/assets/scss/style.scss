@@ -85,15 +85,85 @@ svg {
 }
 
 .title {
+  font-weight: 600;
   font-size: 4.8rem;
   line-height: 5.8rem;
   padding-bottom: 4rem;
+
+  &--h4 {
+    font-size: 1.6rem;
+    line-height: 1.93rem;
+  }
+
+  &-bottom {
+    padding-bottom: 5rem;
+  }
+}
+
+.subheading {
+  font-size: 2rem;
+  line-height: 2.42rem;
+
+  &-bottom {
+    padding-bottom: 2rem;
+  }
+}
+
+.text {
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+
+  &-table {
+    font-size: 1.4rem;
+    line-height: 1.694rem;
+  }
+
+  &-bottom {
+    padding-bottom: 3rem;
+  }
+}
+
+.hide {
+  visibility: hidden;
+}
+
+#show {
+  width: 128.5rem;
+}
+
+.bottom {
+  padding-bottom: 1.2rem;
+}
+
+.agree {
+  color: $white;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+
+  &--black {
+    color: $text-color;
+  }
 }
 
 .subtitle {
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 2.1rem;
+}
+
+.form--line {
+  outline: none;
+  border: none;
+  border-bottom: 0.1rem solid $border;
+}
+
+.top {
+  padding: 5.3rem 0 6rem;
+  height: 23.2rem;
+  background: $maim-color;
+  color: $white;
+  margin-bottom: 8rem;
 }
 
 @import "importsBlocks";

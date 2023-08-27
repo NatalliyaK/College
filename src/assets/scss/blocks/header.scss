@@ -2,9 +2,12 @@
 @import '../fonts';
 
 .header {
-  padding: 2rem 0;
-  display: flex;
-  justify-content: space-between;
+  &__container {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 0.2rem $border;
+  }
 
   &__logo {
     display: flex;
@@ -68,5 +71,3 @@
     cursor: pointer;
   }
 }
-
-

@@ -1,0 +1,17 @@
+@import '../vars';
+
+.basis {
+  &__container {
+    display: flex;
+    padding-top: 8rem;
+    gap: 2rem;
+  }
+
+  &__content {
+    max-width: 12.85rem;
+  }
+
+  &__information {
+    display: flex;
+  }
+}

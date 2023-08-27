@@ -1,0 +1,48 @@
+@import '../vars';
+@import '../fonts';
+
+.footer {
+  margin-top: 16rem;
+
+  &__logo {
+    display: flex;
+
+    &--text {
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+    gap: 16.3rem;
+    border-top: solid 0.2rem $border;
+    padding: 2rem 0 4rem;
+  }
+
+  &__navigation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__navigation-item,
+  &__institutions,
+  &__contact {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    color: $black;
+  }
+
+  &__institutions-item,
+  &__contact {
+    padding-bottom: 2rem;
+    color: $black;
+  }
+}

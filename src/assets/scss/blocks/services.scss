@@ -1,0 +1,22 @@
+@import '../vars';
+
+.services {
+  display: flex;
+  gap: 2rem;
+
+  &__item {
+    border-bottom: 0.1rem solid $border;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__text {
+    padding: 1.5rem 0;
+  }
+
+  &__register {
+    margin-bottom: 4rem;
+  }
+}

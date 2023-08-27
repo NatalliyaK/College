@@ -16,21 +16,21 @@ title: Главная
                     <div class="about__form">
                         <div class="about__form-row">
                             <div class="about__form-element">
-                                <input type="text" id="form-control-name" class="form-control">
+                                <input type="text" id="form-control-name" class="form-control form--line">
                                 <label for="form-control-name" class="input__label input__label-name">Имя</label>
                             </div>
                             <div>
-                                <input type="tel" id="form-control-tel" class="form-control">
+                                <input type="tel" id="form-control-tel" class="form-control form--line">
                                 <label for="form-control-tel" class="input__label input__label-tel">Телефон</label>
                             </div>
                         </div>
                         <button class="button">Оставить заявку</button>
                     </div>
-                    <p class="about__agree">Нажимая кнопку «Оставить заявку», вы соглашаетесь с Политикой конфиденциальности</p>
+                    <p class="agree">Нажимая кнопку «Оставить заявку», вы соглашаетесь с Политикой конфиденциальности</p>
                 </div>
             </div>
             <div class="about__image">
-                <img class="about__image-element" src="../assets/images/image-head.png" alt="image">
+                <img class="about__image-element" src="assets/images/image-head.png" alt="image">
             </div>
         </div>
     </section>
@@ -116,18 +116,18 @@ title: Главная
                     <img src="assets/images/document1.png" class="license__image" alt="document" >
                     <img src="assets/images/document2.png" class="license__image" alt="document">
                 </div>
-<!--                <div class="license__button">-->
-<!--                    <button class="arrow">-->
-<!--                        <svg class="arrow__svg">-->
-<!--                            <use href="#arrow-left"></use>-->
-<!--                        </svg>-->
-<!--                    </button>-->
-<!--                    <button  class="arrow">-->
-<!--                        <svg class="arrow__svg">-->
-<!--                            <use href="#arrow-right"></use>-->
-<!--                        </svg>-->
-<!--                    </button>-->
-<!--                </div>-->
+                <div class="license__button">
+                    <button class="arrow">
+                        <svg class="arrow__svg">
+                            <use href="#arrow-left"></use>
+                        </svg>
+                    </button>
+                    <button  class="arrow">
+                        <svg class="arrow__svg">
+                            <use href="#arrow-right"></use>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -143,21 +143,20 @@ title: Главная
                     <img src="assets/images/document1.png" class="accreditation__image" alt="document" >
                     <img src="assets/images/document2.png" class="accreditation__image" alt="document">
                 </div>
-                <!--                <div class="license__button">-->
-                <!--                    <button class="arrow">-->
-                <!--                        <svg class="arrow__svg">-->
-                <!--                            <use href="#arrow-left"></use>-->
-                <!--                        </svg>-->
-                <!--                    </button>-->
-                <!--                    <button  class="arrow">-->
-                <!--                        <svg class="arrow__svg">-->
-                <!--                            <use href="#arrow-right"></use>-->
-                <!--                        </svg>-->
-                <!--                    </button>-->
-                <!--                </div>-->
+                <div class="license__button">
+                    <button class="arrow">
+                        <svg class="arrow__svg">
+                            <use href="#arrow-left"></use>
+                        </svg>
+                    </button>
+                    <button  class="arrow">
+                        <svg class="arrow__svg">
+                            <use href="#arrow-right"></use>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
-
     </section>
     <section class="news wrapper">
         <h2 class="title">Новости</h2>
@@ -191,10 +190,46 @@ title: Главная
             <button class="button button--purple button--white">Перейти</button>
         </div>
     </section>
-    <section class="requisition">
-
+    <section class="requisition wrapper">
+        <div class="requisition__item">
+            <div class="requisition__form">
+                <h2 class="requisition__title">Остались вопросы?</h2>
+                <p class="requisition__subtitle subtitle">Оставьте Ваши контакты для получения консультации</p>
+                <div class="requisition__form-row">
+                    <div class="requisition__form-element">
+                        <input type="text" id="requisition-control-name" class="requisition-control form--line">
+                        <label for="requisition-control-name" class="input__label requisition__label-name">Имя</label>
+                    </div>
+                    <div class="requisition__form-element">
+                        <input type="tel" id="requisition-control-tel" class="requisition-control form--line">
+                        <label for="requisition-control-tel" class="input__label requisition__label-tel">Телефон</label>
+                    </div>
+                </div>
+                <p class="requisition__agree agree agree--black ">Нажимая кнопку «Оставить заявку», вы соглашаетесь с Политикой конфиденциальности</p>
+                <button class="requisition__button button button--purple button--white">Оставить заявку</button>
+            </div>
+        </div>
+        <div class="requisition__container-image">
+            <img src="assets/images/image-friend.png" class="requisition__image" alt="image">
+        </div>
     </section>
     <section class="contacts wrapper">
-        <h2 class="title">Контакты</h2>
+        <div class="contacts__container">
+            <div class="contacts__information">
+                <h2 class="title">Контакты</h2>
+                <h3 class="contacts__subtitle">Телефоны</h3>
+                <div class="contacts__items">
+                    <a href="tel:+7 (3452) 21-47-71" class="contacts__item">+7 (3452) 21-47-71</a>
+                    <a href="tel:+7 (904) 490-70-98" class="contacts__item">+7 (904) 490-70-98</a>
+                </div>
+                <h3 class="contacts__subtitle contacts__subtitle-email">Электронный адрес</h3>
+                <a href="mailto:info@mtk-college.ru" class="contacts__item">info@mtk-college.ru</a>
+            </div>
+            <div class="contacts__card">
+                <div class="contacts__card-item">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac8a5b7a0323a5abf49c3404f8407e108f9eac2da2a05c8cb2d18311ac6199c4b&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
+            </div>
+        </div>
     </section>
 </div>

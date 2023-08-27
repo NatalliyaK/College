@@ -1,3 +1,32 @@
+let showContent = document.getElementById('show');
+let tab = document.querySelectorAll('.nav-bar__item');
+tab.forEach(el => {
+
+  el.addEventListener("click", () => {
+
+    let content = el.querySelector('.hide').innerHTML;
+    console.log(el.querySelector('.hide'))
+    showContent.innerHTML = content;
+  })
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
   const xl = matchMedia('(max-width: 1024px)');

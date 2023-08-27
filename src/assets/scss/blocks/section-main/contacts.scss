@@ -1,0 +1,49 @@
+@import '../../vars';
+@import '../../fonts';
+
+.contacts {
+  margin-top: 16rem;
+
+  &__subtitle {
+    font-size: 2rem;
+    line-height: 2.41rem;
+    padding-bottom: 2rem;
+  }
+
+  &__container {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__information {
+    padding-right: 5rem;
+  }
+
+  &__item {
+    color: $text-color;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.178rem;
+  }
+
+  &__card {
+    width: 100%;
+    //border: 0.2rem solid $border;
+    //border-radius: 0.2rem;
+  }
+
+  &__subtitle-email {
+    margin-top: 4rem;
+  }
+
+  //&__card-item {
+  //  position: relative;
+  //  z-index: -1;
+  //}
+}

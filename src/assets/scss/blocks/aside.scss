@@ -1,0 +1,27 @@
+@import '../vars';
+
+.nav-bar {
+  width: 41.5rem;
+
+  &__title {
+    font-size: 3.2rem;
+    line-height: 1.87;
+    padding-bottom: 4rem;
+  }
+
+  &__item {
+  margin-bottom: 2rem;
+  padding: 0.4rem 2rem;
+  cursor: pointer;
+  border-left: 0.4rem solid transparent;
+  color: $text-color;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+
+    &:hover {
+      border-left: 0.4rem solid $maim-color;
+      color: $maim-color;
+    }
+  }
+}

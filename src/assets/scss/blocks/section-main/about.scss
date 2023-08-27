@@ -50,12 +50,6 @@
     align-items: end;
   }
 
-  &__agree {
-    color: $white;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-  }
-
   &__image {
     position: relative;
     top: 6rem;
@@ -65,13 +59,11 @@
     }
   }
 }
+
 .form-control {
   width: 19rem;
   height: 2.8rem;
   background: $maim-color;
-  outline: none;
-  border: none;
-  border-bottom: 0.1rem solid $border;
 }
 
 .input__label {
@@ -85,6 +77,6 @@
   }
 
   &-tel {
-    right: 34rem;
+    right: 33.1rem;
   }
 }

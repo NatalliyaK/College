@@ -369,7 +369,7 @@ const create = gulp.series(gulp.parallel(newFile, toEnd));
 const ghPages = require('gulp-gh-pages');
 
 gulp.task('deploy', function() {
-  return gulp.src('./dist/**/*')
+  return gulp.src('./build/dist/**/*')
       .pipe(ghPages());
 });
 

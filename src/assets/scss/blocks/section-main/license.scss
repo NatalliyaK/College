@@ -1,3 +1,5 @@
+@import '../../vars';
+
 .license {
   margin-top: 16rem;
 
@@ -19,16 +21,17 @@
 
   &__button {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     margin-top: 2rem;
     height: 2rem;
-    width: 11rem;
   }
 }
 
 .arrow {
   border: none;
+  background: $white;
   &__svg {
-    width: 4rem;
+    width: 4.2rem;
+    height:1.2rem;
   }
 }
