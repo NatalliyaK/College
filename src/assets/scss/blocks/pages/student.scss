@@ -1,0 +1,22 @@
+@import '../../vars';
+
+.student {
+  &__information {
+    display: flex;
+    justify-content: center;
+
+    &-list {
+      width: 70.5rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    padding: 1.5rem 0;
+    border-bottom: 0.1rem solid $border;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

@@ -1,8 +1,12 @@
 @import '../../vars';
 @import '../../fonts';
+@import '../../mixins';
 
 .contacts {
   margin-top: 16rem;
+  @include breakpoint($sm-bp) {
+    margin-top: 8rem;
+  }
 
   &__subtitle {
     font-size: 2rem;
@@ -34,16 +38,18 @@
 
   &__card {
     width: 100%;
-    //border: 0.2rem solid $border;
-    //border-radius: 0.2rem;
+
+    &-item iframe {
+      border-radius: 2rem;
+    }
   }
 
   &__subtitle-email {
     margin-top: 4rem;
   }
 
-  //&__card-item {
-  //  position: relative;
-  //  z-index: -1;
-  //}
+}
+
+.map iframe {
+  border-radius: 30px;
 }

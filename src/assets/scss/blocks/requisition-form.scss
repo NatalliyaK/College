@@ -1,6 +1,6 @@
 @import '../vars';
 
-.requisition {
+.requisitions {
   &__form {
     display: flex;
     flex-direction: column;
@@ -14,14 +14,42 @@
     border-radius: 2rem;
   }
 
-  &-control {
+  &__form-row {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__form-element {
+    position: relative;
+  }
+
+  &__label-name {
+    position: absolute;
+    top: -1rem;
+    right: 36rem
+  }
+
+  &__label-tel {
+    position: absolute;
+    top: -1rem;
+    right: 32.4rem;
+  }
+
+    &-control {
     background: transparent;
+    width: 40rem;
   }
 
   &__title {
     font-weight: 500;
     font-size: 3.2rem;
     line-height: 3.8rem;
+  }
+
+  &__label-name {
+    right: 36rem;
   }
 
   &__subtitle {

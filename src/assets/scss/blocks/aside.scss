@@ -19,6 +19,7 @@
   font-size: 1.8rem;
   line-height: 2.1rem;
 
+    &--active,
     &:hover {
       border-left: 0.4rem solid $maim-color;
       color: $maim-color;

@@ -6,10 +6,16 @@
 
   &__logo {
     display: flex;
+    text-align: center;
+    align-self: start;
+    align-items: center;
 
     &--text {
       font-size: 1.5rem;
       line-height: 1.8rem;
+      text-align: center;
+      margin-top: 1.3rem;
+      margin-left: -1.5rem
     }
   }
 

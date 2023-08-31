@@ -1,11 +1,20 @@
 @import '../../vars';
+@import '../../fonts';
+@import '../../mixins';
 
 .specialty {
   margin-top: 41.8rem;
+  @include breakpoint($sm-bp) {
+    margin-top: 20.8rem;
+  }
+
   &__information {
     display: flex;
     gap: 2rem;
     justify-content: space-between;
+    @include breakpoint($sm-bp) {
+      flex-direction: column;
+    }
   }
 
   &__text {
@@ -13,12 +22,21 @@
     padding: 3rem;
     border-radius: 1rem;
     width: 56rem;
+    @include breakpoint($sm-bp) {
+      padding: 2rem;
+      max-width: 33rem;
+    }
   }
 
   &__subtitle {
+    font-weight: 600;
     font-size: 1.8rem;
     line-height: 2.1rem;
     margin-bottom: 1.5rem;
+    @include breakpoint($sm-bp) {
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+    }
   }
 
   &__number {
@@ -34,6 +52,10 @@
     display: flex;
     justify-content: space-between;
     gap: 2.4rem;
+    @include breakpoint($sm-bp) {
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 
   &__item {

@@ -1,4 +1,5 @@
 @import '../vars';
+@import '../mixins';
 
 .button {
   height: 4.6rem;
@@ -11,7 +12,13 @@
   border: none;
   cursor: pointer;
   border-radius: 0.8rem;
-  padding: 1.2rem 2.4rem;
+  padding: 1.2rem 3.4rem;
+  @include breakpoint($sm-bp) {
+    height: 4.3rem;
+    font-size: 1.6rem;
+    line-height: 1.93rem;
+    padding: 1.2rem 2.4rem;
+  }
 
 
   &--purple {
@@ -22,9 +29,8 @@
     color: $white;
   }
 
-
-  //&:hover {
-  //  background:
-  //}
+  &:hover {
+    @include bg-button;
+  }
 }
 

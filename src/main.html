@@ -1,7 +1,7 @@
----
+ ---
 layout: default
 title: Главная
----
+ ---
 
 <div class="main">
     <section class="about">
@@ -9,7 +9,7 @@ title: Главная
             <div class="about__information">
                 <div>
                     <h1 class="about__title">Многопрофильный<br> техногический колледж</h1>
-                    <p class="about__subtitle subtitle">г. Тюмень</p>
+                    <div class="about__subtitle subtitle">г. Тюмень</div>
                 </div>
                 <div class="about__requisition">
                     <h2 class="about__requisition-title">Консультация приемной комиссии</h2>
@@ -24,9 +24,9 @@ title: Главная
                                 <label for="form-control-tel" class="input__label input__label-tel">Телефон</label>
                             </div>
                         </div>
-                        <button class="button">Оставить заявку</button>
+                        <button class="button formBtn">Оставить заявку</button>
                     </div>
-                    <p class="agree">Нажимая кнопку «Оставить заявку», вы соглашаетесь с Политикой конфиденциальности</p>
+                    <div class="agree">Нажимая кнопку «Оставить заявку», вы соглашаетесь с Политикой конфиденциальности</div>
                 </div>
             </div>
             <div class="about__image">
@@ -39,33 +39,33 @@ title: Главная
         <div class="specialty__information">
             <div class="specialty__text">
                 <h4 class="specialty__subtitle">Дошкольное образование</h4>
-                <p class="specialty__number subtitle">44.02.01</p>
+                <div class="specialty__number subtitle">44.02.01</div>
                 <div class="specialty__description">
                     <div>
-                        <p class="specialty__duration subtitle">На базе 9 классов:</p>
-                        <p class="specialty__item">очная – 3 года 10 месяцев</p>
-                        <p class="specialty__item">заочная – 4 года 10 месяцев</p>
+                        <div class="specialty__duration subtitle">На базе 9 классов:</div>
+                        <div class="specialty__item">очная – 3 года 10 месяцев</div>
+                        <div class="specialty__item">заочная – 4 года 10 месяцев</div>
                     </div>
                     <div>
-                        <p class="specialty__duration subtitle">На базе 11 классов:</p>
-                        <p class="specialty__item">очная – 2 год 10 месяцев</p>
-                        <p class="specialty__item">заочная – 3 года 10 месяцев</p>
+                        <div class="specialty__duration subtitle">На базе 11 классов:</div>
+                        <div class="specialty__item">очная – 2 год 10 месяцев</div>
+                        <div class="specialty__item">заочная – 3 года 10 месяцев</div>
                     </div>
                 </div>
             </div>
             <div class="specialty__text">
                 <h4 class="specialty__subtitle">Коммерция</h4>
-                <p class="specialty__number subtitle">38.02.04</p>
+                <div class="specialty__number subtitle">38.02.04</div>
                 <div class="specialty__description">
                     <div>
-                        <p class="specialty__duration subtitle">На базе 9 классов:</p>
-                        <p class="specialty__item">очная – 2 года 9 месяцев</p>
-                        <p class="specialty__item">заочная – 4 года 4 месяца</p>
+                        <div class="specialty__duration subtitle">На базе 9 классов:</div>
+                        <div class="specialty__item">очная – 2 года 9 месяцев</div>
+                        <div class="specialty__item">заочная – 4 года 4 месяца</div>
                     </div>
                     <div>
-                        <p class="specialty__duration subtitle">На базе 11 классов:</p>
-                        <p class="specialty__item">очная – 1 год 10 месяцев</p>
-                        <p class="specialty__item">заочная – 2 года 10 месяцев</p>
+                        <div class="specialty__duration subtitle">На базе 11 классов:</div>
+                        <div class="specialty__item">очная – 1 год 10 месяцев</div>
+                        <div class="specialty__item">заочная – 2 года 10 месяцев</div>
                     </div>
                 </div>
             </div>
@@ -74,14 +74,14 @@ title: Главная
                 <p class="specialty__number subtitle">40.02.01</p>
                 <div class="specialty__description">
                     <div>
-                        <p class="specialty__duration subtitle">На базе 9 классов:</p>
-                        <p class="specialty__item">очная – 2 года 10 месяцев</p>
-                        <p class="specialty__item">заочная – 4 года 4 месяца</p>
+                        <div class="specialty__duration subtitle">На базе 9 классов:</div>
+                        <div class="specialty__item">очная – 2 года 10 месяцев</div>
+                        <div class="specialty__item">заочная – 4 года 4 месяца</div>
                     </div>
                     <div>
-                        <p class="specialty__duration subtitle">На базе 11 классов:</p>
-                        <p class="specialty__item">очная – 1 год 10 месяцев</p>
-                        <p class="specialty__item">заочная – 2 года 10 месяцев</p>
+                        <div class="specialty__duration subtitle">На базе 11 классов:</div>
+                        <div class="specialty__item">очная – 1 год 10 месяцев</div>
+                        <div class="specialty__item">заочная – 2 года 10 месяцев</div>
                     </div>
                 </div>
             </div>
@@ -111,22 +111,27 @@ title: Главная
                 <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus iaculis urna id volutpat lacus. Egestas fringilla phasellus faucibus scelerisque. Elementum eu facilisis sed odio morbi.
                 </p>
             </div>
-            <div>
-                <div class="license__documentation">
-                    <img src="assets/images/document1.png" class="license__image" alt="document" >
-                    <img src="assets/images/document2.png" class="license__image" alt="document">
-                </div>
-                <div class="license__button">
+            <div class="license__slider">
+                <div class="slider swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="assets/images/document1.png" alt="Image 1"></div>
+                        <div class="swiper-slide"><img src="assets/images/document2.png" alt="Image 2"></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-button-prev">
                     <button class="arrow">
                         <svg class="arrow__svg">
                             <use href="#arrow-left"></use>
                         </svg>
                     </button>
-                    <button  class="arrow">
+                    </div>
+                    <div class="swiper-button-next">
+                    <button class="arrow">
                         <svg class="arrow__svg">
                             <use href="#arrow-right"></use>
                         </svg>
                     </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -161,30 +166,38 @@ title: Главная
     <section class="news wrapper">
         <h2 class="title">Новости</h2>
         <div class="news__information">
-            <div class="news__items">
-                <img src="assets/images/new.png" class="news__images" alt="image">
-                <h3 class="news__subtitle">Название новости</h3>
-                <p class="news__text">11.07.2023</p>
-                <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum ex id quam tincidunt dapibus. Phasellus tincidunt, mi eu venenatis bibendum, sapien justo hendrerit velit, ac ultrices metus velit eget tortor.</p>
-            </div>
-            <div class="news__items">
-                <img src="assets/images/new.png" class="news__images" alt="image">
-                <h3 class="news__subtitle">Название новости</h3>
-                <p class="news__text">11.07.2023</p>
-                <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum ex id quam tincidunt dapibus. Phasellus tincidunt, mi eu venenatis bibendum, sapien justo hendrerit velit, ac ultrices metus velit eget tortor.</p>
-            </div>
-            <div class="news__items">
-                <img src="assets/images/new.png" class="news__images" alt="image">
-                <h3 class="news__subtitle">Название новости</h3>
-                <p class="news__text">11.07.2023</p>
-                <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum ex id quam tincidunt dapibus. Phasellus tincidunt, mi eu venenatis bibendum, sapien justo hendrerit velit, ac ultrices metus velit eget tortor.</p>
-            </div>
-            <div class="news__items">
-                <img src="assets/images/new.png" class="news__images" alt="image">
-                <h3 class="news__subtitle">Название новости</h3>
-                <p class="news__text">11.07.2023</p>
-                <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum ex id quam tincidunt dapibus. Phasellus tincidunt, mi eu venenatis bibendum, sapien justo hendrerit velit, ac ultrices metus velit eget tortor.</p>
-            </div>
+            <a href="#">
+                <div class="news__items">
+                    <img src="assets/images/new.png" class="news__images" alt="image">
+                    <h3 class="news__subtitle">Название новости</h3>
+                    <p class="news__text">11.07.2023</p>
+                    <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum ex id quam tincidunt dapibus. Phasellus tincidunt, mi eu venenatis bibendum, sapien justo hendrerit velit, ac ultrices metus velit eget tortor.</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="news__items">
+                    <img src="assets/images/new.png" class="news__images" alt="image">
+                    <h3 class="news__subtitle">Название новости</h3>
+                    <p class="news__text">11.07.2023</p>
+                    <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum ex id quam tincidunt dapibus. Phasellus tincidunt, mi eu venenatis bibendum, sapien justo hendrerit velit, ac ultrices metus velit eget tortor.</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="news__items">
+                    <img src="assets/images/new.png" class="news__images" alt="image">
+                    <h3 class="news__subtitle">Название новости</h3>
+                    <p class="news__text">11.07.2023</p>
+                    <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum ex id quam tincidunt dapibus. Phasellus tincidunt, mi eu venenatis bibendum, sapien justo hendrerit velit, ac ultrices metus velit eget tortor.</p>
+                </div>
+            </a>
+           <a href="#">
+               <div class="news__items">
+                   <img src="assets/images/new.png" class="news__images" alt="image">
+                   <h3 class="news__subtitle">Название новости</h3>
+                   <p class="news__text">11.07.2023</p>
+                   <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum ex id quam tincidunt dapibus. Phasellus tincidunt, mi eu venenatis bibendum, sapien justo hendrerit velit, ac ultrices metus velit eget tortor.</p>
+               </div>
+           </a>
         </div>
         <div class="news__button">
             <button class="button button--purple button--white">Перейти</button>
@@ -205,8 +218,8 @@ title: Главная
                         <label for="requisition-control-tel" class="input__label requisition__label-tel">Телефон</label>
                     </div>
                 </div>
-                <p class="requisition__agree agree agree--black ">Нажимая кнопку «Оставить заявку», вы соглашаетесь с Политикой конфиденциальности</p>
-                <button class="requisition__button button button--purple button--white">Оставить заявку</button>
+                <p class="requisition__agree agree agree--black">Нажимая кнопку «Оставить заявку», вы соглашаетесь с Политикой конфиденциальности</p>
+                <button class="requisition__button button button--purple button--white formBtn">Оставить заявку</button>
             </div>
         </div>
         <div class="requisition__container-image">
@@ -232,4 +245,7 @@ title: Главная
             </div>
         </div>
     </section>
+    {{> pop-up}}
 </div>
+
+

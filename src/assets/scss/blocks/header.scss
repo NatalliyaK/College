@@ -1,12 +1,15 @@
 @import '../vars';
 @import '../fonts';
+@import '../mixins';
 
 .header {
   &__container {
-    padding: 2rem 0;
     display: flex;
-    justify-content: space-between;
     border-bottom: solid 0.2rem $border;
+    justify-content: space-between;
+    @include breakpoint($sm-bp) {
+     padding: 1rem 0;
+    }
   }
 
   &__logo {
@@ -14,25 +17,37 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin-right: 7.8rem;
   }
 
   &__logo-text {
+    font-weight: 400;
     font-size: 1.8rem;
-    margin-left: -2rem;
+    line-height: 1.87rem;
+    margin-left: -1.5rem;
     text-align: center;
+    @include breakpoint($sm-bp) {
+      font-size: 1rem;
+      line-height: 1.2rem;
+      margin-left: -1rem;
+    }
   }
 
   &__navigation {
-    margin-top: 4rem;
-  }
-
-  &__links {
-    margin-top: 4rem;
+    margin: 3.9rem 11.6rem 3.9rem 0;
+    @include breakpoint($xl-bp) {
+      display: none;
+    }
+    @include breakpoint($sm-bp) {
+      display: none;
+    }
   }
 
   &__navigation-list {
+    text-align: center;
     display: flex;
-    gap: 3rem;
+    gap: 4.09rem;
+    align-items: center;
   }
 
   &__navigation-item {
@@ -44,30 +59,32 @@
 
   &__links {
     display: flex;
+    align-items: center;
     gap: 4rem;
+    @include breakpoint($sm-bp) {
+      gap: 2rem;
+    }
   }
 
   &__links-phone {
     font-size: 1.8rem;
+    color: $maim-color;
+    @include breakpoint($xl-bp) {
+
+    }
+    @include breakpoint($sm-bp) {
+      display: none;
+    }
   }
 
   &__svg {
     fill: transparent;
     width: 3.2rem;
     height: 3.2rem;
+    @include breakpoint($sm-bp) {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
   }
 }
 
-.tap-area {
-  position: relative;
-
-  &:before {
-    right: -0.6rem;
-    left: -0.6rem;
-    content: "";
-    position: absolute;
-    top: -5.6rem;
-    bottom: -0.6rem;
-    cursor: pointer;
-  }
-}

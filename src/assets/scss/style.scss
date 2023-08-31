@@ -1,7 +1,7 @@
-@import "fonts";
-@import "vars";
-@import "mixins";
-@import "vendor/reset";
+@import 'fonts';
+@import 'vars';
+@import 'mixins';
+@import 'vendor/reset';
 
 html {
   box-sizing: border-box;
@@ -23,6 +23,11 @@ html {
   box-sizing: inherit;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Inter;
 }
@@ -36,6 +41,21 @@ svg {
   transition: all 0.1s linear;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.form-control {
+  color: white;
+  height: auto;
+  text-transform: uppercase;
+}
+
+.form-control:focus + .input__label {
+  display: none;
+}
+
 .hide {
   display: none;
 }
@@ -44,44 +64,15 @@ svg {
   display: block;
 }
 
-.container {
-  padding-right: 4rem;
-  padding-left: 4rem;
-  @include breakpoint($cos-bp) {
-    padding-right: 5rem;
-    padding-left: 5rem;
-  }
-  @include breakpoint($xl-bp) {
-    padding-right: 2rem;
-    padding-left: 2rem;
-  }
-  @include breakpoint($sm-bp) {
-    padding-right: 2.5rem;
-    padding-left: 2.5rem;
-  }
-}
-
-.img-contain {
-  display: block;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-}
-.img-cover {
-  display: block;
-  overflow: hidden;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
 .wrapper {
   margin: 0 auto;
   max-width: 172rem;
+  @include breakpoint($xl-bp) {
+
+  }
+  @include breakpoint($sm-bp) {
+    max-width: 33.5rem;
+  }
 }
 
 .title {
@@ -89,6 +80,10 @@ svg {
   font-size: 4.8rem;
   line-height: 5.8rem;
   padding-bottom: 4rem;
+  @include breakpoint($sm-bp) {
+    font-size: 3.2rem;
+    line-height: 3.87rem;
+  }
 
   &--h4 {
     font-size: 1.6rem;
@@ -123,12 +118,57 @@ svg {
   }
 }
 
-.hide {
-  visibility: hidden;
+.soar:hover {
+  color: $maim-color;
 }
 
-#show {
-  width: 128.5rem;
+.image-logo {
+  width: 9rem;
+  @include breakpoint($sm-bp) {
+    width: 5.3rem;
+  }
+}
+
+.menu-btn {
+  display: none;
+  @include breakpoint($sm-bp) {
+    display: block;
+  }
+}
+
+.menu-btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+
+  & span {
+    width: 21px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $maim-color;
+  }
+
+  & span:nth-of-type(1) {
+    top: calc(50% - 5px);
+  }
+
+  & span:nth-of-type(2) {
+    top: 50%;
+  }
+
+  & span:nth-of-type(3) {
+    top: calc(50% + 5px);
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 .bottom {
@@ -150,6 +190,13 @@ svg {
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 2.1rem;
+  @include breakpoint($xl-bp) {
+    font-size: 1.6rem;
+    line-height: 1.93rem;
+  }
+  @include breakpoint($sm-bp) {
+
+  }
 }
 
 .form--line {
@@ -164,6 +211,36 @@ svg {
   background: $maim-color;
   color: $white;
   margin-bottom: 8rem;
+}
+
+.breadcrumbs {
+  margin-bottom: 2rem;
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__item a {
+    color: $white;
+  }
+
+  &__item + li::before {
+    content: ">";
+    padding: 0 0.5rem;
+    vertical-align: super;
+  }
+}
+
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+
+
+.arrow:hover {
+  @include bg-button;
 }
 
 @import "importsBlocks";

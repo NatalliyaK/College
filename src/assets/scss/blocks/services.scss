@@ -4,6 +4,10 @@
   display: flex;
   gap: 2rem;
 
+  &__content {
+    width: 70.5rem;
+  }
+
   &__item {
     border-bottom: 0.1rem solid $border;
 

@@ -4,13 +4,21 @@
   display: flex;
   gap: 2rem;
   margin-bottom: 4rem;
+
+  &__content {
+    width: 70.5rem;
+  }
 }
 
 .slider {
   position: relative;
+
+  & img {
+    width: 45rem;
+  }
 }
 
-.arrow {
+.arrow-slider {
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 50%;
@@ -27,22 +35,22 @@
   }
 }
 
-.arrow.left {
+.arrow-slider.left {
   left: 2.1rem;
 }
 
-.arrow.right {
+.arrow-slider.right {
   right: 2.1rem;
 }
 
-.arrow.right a {
+.arrow-slider.right a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 50%;
 }
 
-.arrow.left a {
+.arrow-slider.left a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
