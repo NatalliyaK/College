@@ -1,9 +1,18 @@
 @import '../vars';
+@import '../fonts';
+@import '../mixins';
 
 .document {
   display: flex;
   gap: 2rem;
   margin-bottom: 15.6rem;
+  @include breakpoint($xl-bp) {
+    align-items: center;
+    flex-direction: column;
+    padding-top: 0;
+    gap: 6rem;
+    margin-bottom: 0;
+  }
 
   &__container {
     display: flex;
@@ -12,6 +21,9 @@
 
   &__text {
     padding: 1.5rem 0;
+    @include breakpoint($xl-bp) {
+      padding: 1rem 0;
+    }
   }
 
   &__item {

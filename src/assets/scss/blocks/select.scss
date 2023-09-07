@@ -1,0 +1,58 @@
+@import "../vars";
+
+.choices[data-type*=select-one]:after {
+  width: 1rem;
+  height: 1rem;
+  z-index: 2;
+  top: 40%;
+  border: 0.2rem solid $maim-color;
+  border-width: 0 0 0.2rem 0.2rem;
+  transform: rotate(-45deg);
+}
+
+.choices[data-type*=select-one].is-open:after {
+  top: 60%;
+  border: 0.2rem solid $maim-color;
+  border-width:  0.2rem 0.2rem 0 0;
+}
+
+.choices__inner {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  border: none;
+  border-bottom: 0.2rem solid $maim-color;
+
+  &--active,
+  &:hover {
+    border-bottom: 0.2rem solid $maim-color;
+    color: $maim-color;
+  }
+}
+
+.choices__list--dropdown {
+  border: none;
+}
+
+.is-open .choices__inner {
+  border-bottom: 0.2rem solid $maim-color;
+}
+
+
+.choices__list--dropdown .choices__item--selectable:hover {
+  border-bottom: 0.2rem solid $maim-color;
+  color: $maim-color;
+}
+
+.choices__item--selectable[aria-selected="true"] {
+  color: $maim-color;
+}
+
+.choices {
+  border-bottom: 0.2rem solid;
+  border-bottom-color: $maim-color;
+}
+
+.color {
+  color: $maim-color;
+}

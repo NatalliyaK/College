@@ -4,19 +4,29 @@
 
 .contacts {
   margin-top: 16rem;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     margin-top: 8rem;
   }
 
   &__subtitle {
     font-size: 2rem;
     line-height: 2.41rem;
+    letter-spacing: 0.05rem;
     padding-bottom: 2rem;
+    @include breakpoint($xl-bp) {
+      font-size: 1.8rem;
+      line-height: 2.1rem;
+      padding-bottom: 1.5rem;
+    }
   }
 
   &__container {
     display: flex;
     gap: 2rem;
+    @include breakpoint($xl-bp) {
+      flex-direction: column;
+      gap: 4rem;
+    }
   }
 
   &__items {
@@ -27,13 +37,21 @@
 
   &__information {
     padding-right: 5rem;
+    @include breakpoint($xl-bp) {
+      padding-right: 3rem;
+    }
   }
 
   &__item {
-    color: $text-color;
+    color: $text-contact;
     font-weight: 400;
     font-size: 1.8rem;
     line-height: 2.178rem;
+    letter-spacing: 0.05rem;
+    @include breakpoint($sm-bp) {
+      font-size: 1.6rem;
+      line-height: 1.93rem;
+    }
   }
 
   &__card {

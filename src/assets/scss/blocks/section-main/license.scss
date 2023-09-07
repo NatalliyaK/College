@@ -6,7 +6,7 @@
 .license {
   margin-top: 16rem;
 
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     margin-top: 8rem;
   }
 
@@ -14,32 +14,41 @@
     display: flex;
     justify-content: space-between;
     gap: 6rem;
-    //@include breakpoint($sm-bp) {
-    //  flex-direction: column;
-    //  gap: 4rem;
-    //}
+    @include breakpoint($xl-bp) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 4rem;
+    }
   }
 
   &__slider {
     overflow: hidden;
+    width: 296rem;
+    @include breakpoint($xl-bp) {
+      width: 47rem;
+      align-self: center;
+    }
+    @include breakpoint($sm-bp) {
+      width: 23rem;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+    height: 2rem;
   }
 
   &__documentation {
     display: flex;
     gap: 2rem;
-
-    //&:last-child {
-    //  display: none;
-    //}
   }
 
   &__image {
-    //width: 45.5rem;
-    //height: 58.8rem;
-    //@include breakpoint($sm-bp) {
-    //  width: 33.5rem;
-    //  height: 47.5rem;
-    //}
+    @include breakpoint($xl-bp) {
+      width: 23rem;
+    }
   }
 
   &__button {

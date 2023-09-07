@@ -1,3 +1,5 @@
+@import '../../fonts';
+@import '../../mixins';
 @import '../../vars';
 
 .requisition {
@@ -8,6 +10,18 @@
   height: 76.3rem;
   background: $maim-color;
   border-radius: 2rem;
+  @include breakpoint($xl-bp) {
+    display: none;
+  }
+
+  &__mob {
+    display: none;
+    @include breakpoint($xl-bp) {
+      display: flex;
+      justify-content: center;
+      margin-top: 8rem;
+    }
+  }
 
   &__item {
     margin-bottom: 12.4rem;
@@ -23,12 +37,22 @@
     height: 51.5rem;
     background: $white;
     border-radius: 2rem;
+    @include breakpoint($sm-bp) {
+      height: 42.5rem;
+      background: $maim-color;
+      padding: 4rem 2rem;
+    }
   }
 
   &__title {
    font-weight: 500;
    font-size: 3.2rem;
    line-height: 3.87rem;
+   letter-spacing: 0.05rem;
+    @include breakpoint($sm-bp) {
+      font-size: 2.4rem;
+      line-height: 2.9rem;
+    }
   }
 
   &__subtitle {
@@ -46,6 +70,11 @@
   &__container-image {
     width: 100.7rem;
     height: 65.5rem;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    @include breakpoint($xl-bp) {
+      display: none;
+    }
   }
 
   &__image {
@@ -79,4 +108,8 @@
   &-control {
     width: 40rem;
   }
+}
+
+.opacity {
+  opacity: 1;
 }

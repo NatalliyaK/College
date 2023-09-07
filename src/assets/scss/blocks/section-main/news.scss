@@ -4,14 +4,16 @@
 
 .news {
   margin-top: 16rem;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     margin-top: 8rem;
   }
 
   &__information {
     display: flex;
     gap: 2rem;
-    @include breakpoint($sm-bp) {
+    flex-wrap: wrap;
+    justify-content: center;
+      @include breakpoint($sm-bp) {
       flex-direction: column;
     }
   }
@@ -19,8 +21,18 @@
   &__subtitle {
     font-size: 2rem;
     line-height: 2.42rem;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     letter-spacing: 0.05rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    border-bottom: 0.2rem transparent solid;
+    &:hover {
+      border-bottom: 0.2rem solid $maim-color;
+      transition: 1s;
+      opacity: 1;
+    }
     @include breakpoint($sm-bp) {
       margin: 0.8rem 0;
       font-size: 1.8rem;
@@ -45,17 +57,30 @@
     }
   }
 
-  &__images {
-    height: 41.5rem;
-    @include breakpoint($sm-bp) {
-      height: 33.5rem;
+  &-elem {
+    height: 52rem;
+    width: 41rem;
+    position: relative;
+    &:hover .tooltip {
+      opacity: 1;
     }
+    @include breakpoint($xl-bp) {
+      height: 44rem;
+      width: 33.5rem;
+    }
+  }
+
+  &__images {
+    width: 100%;
   }
 
   &__button {
     display: flex;
     justify-content: right;
     padding-top: 4rem;
+    @include breakpoint($xl-bp) {
+      justify-content: center;
+    }
   }
 
   &--center {
@@ -68,6 +93,13 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
+    @include breakpoint($xl-bp) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint($sm-bp) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 38.5rem);
+    }
 
     & img {
       width: 100%;
@@ -82,4 +114,10 @@
 
 .news__items:hover .news__images {
   transform: scale(1.03);
+}
+
+.button.button--purple.button--white {
+  @include breakpoint($sm-bp) {
+    flex-grow: 1;
+  }
 }

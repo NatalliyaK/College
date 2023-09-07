@@ -2,14 +2,50 @@
 
 .structure {
   width: 70rem;
+  @include breakpoint($xl-bp) {
+    width: 40rem;
+  }
+  @include breakpoint($sm-bp) {
+    width: 33.5rem;
+  }
+  &-top {
+    padding-top: 1.5rem;
+  }
+}
+
+.wrapper__table::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.wrapper__table::-webkit-scrollbar-track {
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: $white;
+}
+
+.wrapper__table::-webkit-scrollbar-thumb {
+  background-color: $text-color;
+  background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, .25) 25%,
+          transparent 25%,
+          transparent 50%,
+          rgba(255, 255, 255, .25) 50%,
+          rgba(255, 255, 255, .25) 75%,
+          transparent 75%,
+          transparent);
 }
 
 td {
   padding: 1.2rem 1.5rem;
+  @include breakpoint($xl-bp) {
+    padding: 0.5rem 0.8rem;
+
+  }
 }
 
 th {
   padding: 2rem 1.5rem;
+  @include breakpoint($sm-bp) {
+    padding: 1.5rem 0.5rem;
+  }
 }
 
 td, th {
@@ -34,7 +70,9 @@ table {
   border-radius: 1rem;
   overflow: hidden;
   margin-bottom: 4rem;
-
+  @include breakpoint($xl-bp) {
+    margin-bottom: 0;
+  }
 }
 
 tr:first-child th:first-child {

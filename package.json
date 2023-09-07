@@ -4,32 +4,27 @@
   "description": "",
   "author": "DevMinrat",
   "devDependencies": {
-    "autoprefixer": "^10.4.13",
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
     "browser-sync": "^2.26.14",
-    "cssnano": "^5.1.14",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
     "gulp-cssbeautify": "^3.0.0",
     "gulp-cssnano": "^2.1.3",
-    "gulp-file-include": "^2.3.0",
     "gulp-gh-pages": "^0.5.4",
-    "gulp-htmlhint": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
-    "gulp-jshint": "^2.1.0",
+    "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-postcss": "^9.0.1",
-    "gulp-pug": "^5.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-rigger": "^0.5.8",
-    "gulp-sass": "^5.1.0",
+    "gulp-sass": "^5.0.0",
     "gulp-strip-css-comments": "^2.0.0",
-    "jshint": "^2.13.6",
+    "gulp-uglify": "^3.0.2",
     "panini": "^1.7.1",
-    "postcss": "^8.4.19",
     "rigger": "^1.0.1",
-    "sass": "^1.56.1",
-    "tailwindcss": "^3.2.4"
+    "sass": "^1.43.5"
   },
   "browserslist": [
     "last 1 version",
@@ -39,11 +34,8 @@
   "dependencies": {
     "@fancyapps/ui": "^4.0.27",
     "bootstrap": "^5.2.0-beta1",
-    "choices.js": "^10.1.0",
-    "gulp-footer": "^2.1.0",
-    "gulp-purgecss": "^5.0.0",
-    "gulp-remember": "^1.0.1",
-    "swiper": "^8.4.7",
-    "yargs": "^17.7.2"
+    "choices.js": "^10.2.0",
+    "owl.carousel": "^2.3.4",
+    "swiper": "^8.2.6"
   }
 }

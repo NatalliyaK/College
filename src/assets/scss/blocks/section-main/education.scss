@@ -4,7 +4,7 @@
 
 .education {
   margin-top: 16rem;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     margin-top: 8rem;
   }
 
@@ -28,7 +28,7 @@
   &__information {
     display: flex;
     gap: 2rem;
-    @include breakpoint($sm-bp) {
+    @include breakpoint($xl-bp) {
       flex-direction: column;
     }
   }

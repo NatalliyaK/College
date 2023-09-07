@@ -1,12 +1,23 @@
 @import '../vars';
+@import '../fonts';
+@import '../mixins';
 
 .nav-bar {
   width: 41.5rem;
+  @include breakpoint($xl-bp) {
+    width: 22.5rem;
+  }
 
   &__title {
     font-size: 3.2rem;
     line-height: 1.87;
     padding-bottom: 4rem;
+    letter-spacing: 0.05rem;
+    @include breakpoint($xl-bp) {
+      font-size: 2rem;
+      line-height: 2.9rem;
+      padding-bottom: 2rem;
+    }
   }
 
   &__item {
@@ -18,7 +29,12 @@
   font-weight: 600;
   font-size: 1.8rem;
   line-height: 2.1rem;
-
+    @include breakpoint($xl-bp) {
+      margin-bottom: 0.5rem;
+      padding: 0.1rem 0.5rem;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+    }
     &--active,
     &:hover {
       border-left: 0.4rem solid $maim-color;

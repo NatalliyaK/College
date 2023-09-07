@@ -6,11 +6,12 @@ title: Основные сведения
 <div class="basis wrapper">
     <div class="basis__container">
         {{> aside}}
-        <div class="basis__tab-content">
+        {{> select}}
+        <div class="basis__tab-content wrapper__mob-tabs">
             <div class="tabs__content">
                 <section class="basis__information">
                     <div>
-                        <h1 class="title title-bottom">Основные сведения</h1>
+                        <h1 class="title title--color title-bottom">Основные сведения</h1>
                         <h3 class="subheading subheading-bottom">Полное наименование образовательной организации</h3>
                         <p class="text text-bottom">Частное профессиональное образовательное учреждение «Многопрофильный технологический колледж»</p>
                         <h3 class="subheading subheading-bottom">Сокращенное наименование образовательной организации</h3>
@@ -44,29 +45,31 @@ title: Основные сведения
             </div>
             <div class="tabs__content">
                 <section>
-                    <h1 class="title structure">Структура и органы управления образовательной организацией</h1>
-                    <table>
-                        <tr>
-                            <td><h3 class="text">Наименование структурного подразделения</h3></td>
-                            <td><h3 class="text">Руководитель структурного подразделения</h3></td>
-                            <td><h3 class="text">Должность</h3></td>
-                            <td><h3 class="text">Местонахождение структурного подразделения</h3></td>
-                            <td><h3 class="text">Адрес официального сайта в сети «Интернет»</h3></td>
-                            <td><h3 class="text">Адрес электронной почты, телефон</h3></td>
-                            <td><h3 class="text">Сведения о наличии положений</h3></td>
-                        </tr>
-                        <tr>
-                            <td><p class="text-table">Директор</p></td>
-                            <td><p class="text-table">Бугеро Алексей Александрович</p></td>
-                            <td><p class="text-table">Директор</p></td>
-                            <td><p class="text-table">153000, Ивановская область, г. Иваново, ул. 10 Августа д. 4, кб. 43</p></td>
-                            <td><p class="text-table">igtk.ru</p></td>
-                            <td><p class="text-table">ivgtk@mail.ru</p></td>
-                            <td><p class="text-table">Устав</p></td>
-                        </tr>
-                    </table>
-                    <div class="structure">
-                        <h3 class="subheading subheading-bottom">Органы управления ЧПОУ МТК</h3>
+                    <h1 class="title title--color structure">Структура и органы управления образовательной организацией</h1>
+                    <div class="wrapper__table">
+                        <table>
+                            <tr>
+                                <td><h3 class="text">Наименование структурного подразделения</h3></td>
+                                <td><h3 class="text">Руководитель структурного подразделения</h3></td>
+                                <td><h3 class="text">Должность</h3></td>
+                                <td><h3 class="text">Местонахождение структурного подразделения</h3></td>
+                                <td><h3 class="text">Адрес официального сайта в сети «Интернет»</h3></td>
+                                <td><h3 class="text">Адрес электронной почты, телефон</h3></td>
+                                <td><h3 class="text">Сведения о наличии положений</h3></td>
+                            </tr>
+                            <tr>
+                                <td><p class="text-table">Директор</p></td>
+                                <td><p class="text-table">Бугеро Алексей Александрович</p></td>
+                                <td><p class="text-table">Директор</p></td>
+                                <td><p class="text-table">153000, Ивановская область, г. Иваново, ул. 10 Августа д. 4, кб. 43</p></td>
+                                <td><p class="text-table">igtk.ru</p></td>
+                                <td><p class="text-table">ivgtk@mail.ru</p></td>
+                                <td><p class="text-table">Устав</p></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="structure structure-top">
+                        <h3 class="subheading subheading-bottom title--color">Органы управления ЧПОУ МТК</h3>
                         <p class="text text-bottom">Управление Колледжем осуществляется в соответствии с законодательством Российской Федерации, Уставом ЧПОУ МТК и строится на сочетании принципов единоначалия и коллегиальности.</p>
                         <p class="text text-bottom">Органами управления Колледжем являются Учредитель, Директор Колледжа, Конференция работников и обучающихся Колледжа, Педагогический совет.</p>
                         <h3 class="subheading subheading-bottom">Учредителем Колледжа является юридическое лицо Российской Федерации</h3>
@@ -82,27 +85,27 @@ title: Основные сведения
             <div class="tabs__content">
                 <section class="document">
                 <div>
-                    <h1 class="title">Документы</h1>
+                    <h1 class="title title-bottom title--color">Документы</h1>
                     <ul>
-                        <li class="document__item"><h4 class="title--h4 document__text">Cвидетельство о постановке на налоговый учет</h4></li>
-                        <li class="document__item"><h4 class="title--h4 document__text">Устав ЧПОУ МТК</h4></li>
-                        <li class="document__item"><h4 class="title--h4 document__text">Договор на оказание медицинских услуг</h4></li>
-                        <li class="document__item"><h4 class="title--h4 document__text">Договор на оказание услуг питания</h4></li>
-                        <li class="document__item"><h4 class="title--h4 document__text">Договор на оказание услуг по медицинским осмотрам</h4></li>
-                        <li class="document__item"><h4 class="title--h4 document__text">Решение учредителя</h4></li>
-                        <li class="document__item"><h4 class="title--h4 document__text">Санитарно эпидемиологическое заключение ЧПОУ МТК</h4></li>
-                        <li class="document__item"><h4 class="title--h4 document__text">Свидетельство о госдарственной регистрации некоммерческой организации ЧПОУ МТК</h4></li>
-                        <li class="document__item"><h4 class="title--h4 document__text">Выписка из реестра лицензий № Л035-01215-72-00638062</h4></li>
-                        <li class="document__item"><h4 class="title--h4 document__text">Положение о порядке реализации ускоренных ОПОП СПО</h4></li>
-                        <li class="document__item"><h4 class="title--h4 document__text">Положение_об_апелляционной_комиссии</h4></li>
-                        <li class="document__item"><h4 class="title--h4 document__text">Положение о применении ЭО ДОТ</h4></li>
-                        <li class="document__item"><h4 class="title--h4 document__text">Порядок и основания предоставл академотпуска перевод отчисления и восстановл обучающихся Порядок зачета результатов обучающимися учебных предметов курсов дисциплин</h4></li>
-                        <li class="document__item"><h4 class="title--h4 document__text">Правила внутреннего распорядка обучающихся</h4></li>
-                        <li class="document__item"><h4 class="title--h4 document__text">Права и обязанности обучающихся</h4></li>
-                        <li class="document__item"><h4 class="title--h4 document__text">Правила внутреннего трудового распорядка</h4></li>
-                        <li class="document__item"><h4 class="title--h4 document__text">Режим занятий обучающихся</h4></li>
-                        <li class="document__item"><h4 class="title--h4 document__text">Положение о комиссии для проведения вступительных испытаний при приёме</h4></li>
-                        <li class="document__item"><h4 class="title--h4 document__text">Положение о порядке возникновения, приостановления и прекращения образовательных отношений между ЧПОУ МТК и обучающимися и (или) родителями (законными представителями) несовершеннолетних обучающихся</h4></li>
+                        <li class="document__item"><h4 class="title--h4 document__text"><a>Cвидетельство о постановке на налоговый учет</a></h4></li>
+                        <li class="document__item"><h4 class="title--h4 document__text"><a>Устав ЧПОУ МТК</a></h4></li>
+                        <li class="document__item"><h4 class="title--h4 document__text"><a>Договор на оказание медицинских услуг</a></h4></li>
+                        <li class="document__item"><h4 class="title--h4 document__text"><a>Договор на оказание услуг питания</a></h4></li>
+                        <li class="document__item"><h4 class="title--h4 document__text"><a>Договор на оказание услуг по медицинским осмотрам</a></h4></li>
+                        <li class="document__item"><h4 class="title--h4 document__text"><a>Решение учредителя</a></h4></li>
+                        <li class="document__item"><h4 class="title--h4 document__text"><a>Санитарно эпидемиологическое заключение ЧПОУ МТК</a></h4></li>
+                        <li class="document__item"><h4 class="title--h4 document__text"><a>Свидетельство о госдарственной регистрации некоммерческой организации ЧПОУ МТК</a></h4></li>
+                        <li class="document__item"><h4 class="title--h4 document__text"><a>Выписка из реестра лицензий № Л035-01215-72-00638062</a></h4></li>
+                        <li class="document__item"><h4 class="title--h4 document__text"><a>Положение о порядке реализации ускоренных ОПОП СПО</a></h4></li>
+                        <li class="document__item"><h4 class="title--h4 document__text"><a>Положение_об_апелляционной_комиссии</a></h4></li>
+                        <li class="document__item"><h4 class="title--h4 document__text"><a>Положение о применении ЭО ДОТ</a></h4></li>
+                        <li class="document__item"><h4 class="title--h4 document__text"><a>Порядок и основания предоставл академотпуска перевод отчисления и восстановл обучающихся Порядок зачета результатов обучающимися учебных предметов курсов дисциплин</a></h4></li>
+                        <li class="document__item"><h4 class="title--h4 document__text"><a>Правила внутреннего распорядка обучающихся</a></h4></li>
+                        <li class="document__item"><h4 class="title--h4 document__text"><a>Права и обязанности обучающихся</a></h4></li>
+                        <li class="document__item"><h4 class="title--h4 document__text"><a>Правила внутреннего трудового распорядка</a></h4></li>
+                        <li class="document__item"><h4 class="title--h4 document__text"><a>Режим занятий обучающихся</a></h4></li>
+                        <li class="document__item"><h4 class="title--h4 document__text"><a>Положение о комиссии для проведения вступительных испытаний при приёме</a></h4></li>
+                        <li class="document__item"><h4 class="title--h4 document__text"><a>Положение о порядке возникновения, приостановления и прекращения образовательных отношений между ЧПОУ МТК и обучающимися и (или) родителями (законными представителями) несовершеннолетних обучающихся</a></h4></li>
                     </ul>
                 </div>
                 <div>{{> requisition-form}}</div>
@@ -110,13 +113,13 @@ title: Основные сведения
             </div>
             <div class="tabs__content">
                 <section class="services">
-                    <div class="services__content">
-                        <h1 class="title">Платные образовательные услуги</h1>
+                    <div>
+                        <h1 class="title title-bottom title--color">Платные образовательные услуги</h1>
                         <ul>
-                            <li class="services__item"><h4 class="text services__text">Положение о порядке оказания платных образовательных услуг</h4></li>
-                            <li class="services__item"><h4 class="text services__text">Образец договора об оказании платных образовательных услуг (doc)</h4></li>
-                            <li class="services__item"><h4 class="text services__text">Приказ О стоимости обучения по образовательным программам среднего профессионального образования по договору оказания платных образовательных услуг для обучающихся первого года очной формы в 2023/2024 учебном году</h4></li>
-                            <li class="services__item"><h4 class="text services__text">Приказ О стоимости обучения по образовательным программам среднего профессионального образования по договору оказания платных образовательных услуг для обучающихся первого года заочной формы в 2023/2024 учебном году</h4></li>
+                            <li class="services__item"><h4 class="text services__text"><a href="#">Положение о порядке оказания платных образовательных услуг</a></h4></li>
+                            <li class="services__item"><h4 class="text services__text"><a href="#">Образец договора об оказании платных образовательных услуг (doc)</a></h4></li>
+                            <li class="services__item"><h4 class="text services__text"><a href="#">Приказ О стоимости обучения по образовательным программам среднего профессионального образования по договору оказания платных образовательных услуг для обучающихся первого года очной формы в 2023/2024 учебном году</a></h4></li>
+                            <li class="services__item"><h4 class="text services__text"><a href="#">Приказ О стоимости обучения по образовательным программам среднего профессионального образования по договору оказания платных образовательных услуг для обучающихся первого года заочной формы в 2023/2024 учебном году</a></h4></li>
                         </ul>
                     </div>
                     <div class="services__register">{{> requisition-form}}</div>
@@ -125,7 +128,7 @@ title: Основные сведения
             <div class="tabs__content">
                 <section class="accessible">
                     <div class="accessible__content">
-                        <h1 class="title title-bottom">Доступная среда</h1>
+                        <h1 class="title title-bottom title--color">Доступная среда</h1>
                         <h3 class="subheading subheading-bottom">О специально оборудованных учебных кабинетах</h3>
                         <div class="text text-bottom">В колледже создан специализированное учебное место для занятий с инвалидами и лицами ОВЗ. Он оборудован современными техническими средствами (ноутбуком со шрифтом Брайля), которые позволяют осуществлять мультимедейное представление учебного материала, увеличение шрифта изучаемых учебных и методических материалов для слабовидящих, дублирование его содержания посредством аудиосистемы. Обучающиеся с нарушением слуха имеют возможность с помощью акустической системы с помощью персональных наушников усиления громкости звука. Кроме того, звуковая информация для них дублируется визуальными средствами. Для инвалидов с нарушениями опорно-двигательного аппарата предусмотрено специальные посадочные места. Все это обеспечивает комфортность освоения инвалидами и лицами с ОВЗ избранных ими образовательных программ.</div>
                         <h3 class="subheading subheading-bottom">Об объектах для проведения практических занятий, приспособленных для использования инвалидами и лицами с ограниченными возможностями здоровья</h3>
@@ -187,28 +190,33 @@ title: Основные сведения
                         <div class="text text-bottom">Общежития в колледже нет.</div>
                         <h3 class="subheading subheading-bottom">Нормативные документы</h3>
                         <ul>
-                            <li class="services__item"><h4 class="text services__text">Положение о комиссии по выполнению комплекса мероприятий по обеспечению условий доступности</h4></li>
-                            <li class="services__item"><h4 class="text services__text">Порядок допуска собаки-проводника</h4></li>
-                            <li class="services__item"><h4 class="text services__text">Приказ 4_1 от 15.03.2022 Об обеспечении доступа на объект собаки-проводника</h4></li>
-                            <li class="services__item"><h4 class="text services__text">Приказ от 01.02.2022 № 3 О проведении комплекса мероприятий по обеспечению условий доступности объектов и предоставляемых слуг в сфере образования для лиц с ограниченными возможностями</h4></li>
-                            <li class="services__item"><h4 class="text services__text">Приказ от 01.02.2022 № 3_1 О создании объектовой комиссии</h4></li>
+                            <li class="services__item"><h4 class="text services__text"><a href="#">Положение о комиссии по выполнению комплекса мероприятий по обеспечению условий доступности</a></h4></li>
+                            <li class="services__item"><h4 class="text services__text"><a href="#">Порядок допуска собаки-проводника</a></h4></li>
+                            <li class="services__item"><h4 class="text services__text"><a href="#">Приказ 4_1 от 15.03.2022 Об обеспечении доступа на объект собаки-проводника</a></h4></li>
+                            <li class="services__item"><h4 class="text services__text"><a href="#">Приказ от 01.02.2022 № 3 О проведении комплекса мероприятий по обеспечению условий доступности объектов и предоставляемых слуг в сфере образования для лиц с ограниченными возможностями</a></h4></li>
+                            <li class="services__item"><h4 class="text services__text"><a href="#">Приказ от 01.02.2022 № 3_1 О создании объектовой комиссии</a></h4></li>
                         </ul>
                         <h3 class="subheading subheading-bottom">Фото</h3>
-                        <div class="slider">
-                            <img src="./assets/images/image-accessible.jpg" alt="accessible">
-                            <div class="arrow-slider left">
-                                <a>
-                                    <svg class="arrow-slider__item">
-                                        <use href="#arrowSlider-left"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                            <div class="arrow-slider right">
-                                <a>
-                                    <svg class="arrow-slider__item">
-                                        <use href="#arrowSlider-right"></use>
-                                    </svg>
-                                </a>
+                        <div class="accessible__slider">
+                            <div class="slider-photo swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="./assets/images/image-accessible.jpg" alt="accessible"></div>
+                                    <div class="swiper-slide"><img src="./assets/images/image-accessible.jpg" alt="accessible"></div>
+                                </div>
+                                    <div class="swiper-button-prev">
+                                        <a class="arrow-slider left">
+                                            <svg class="arrow-slider__item">
+                                                <use href="#arrowSlider-left"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-button-next">
+                                        <a class="arrow-slider right">
+                                            <svg class="arrow-slider__item">
+                                                <use href="#arrowSlider-right"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -219,4 +227,5 @@ title: Основные сведения
     </div>
     {{> pop-up}}
 </div>
+
 <script src="assets/js/tabs.js"></script>

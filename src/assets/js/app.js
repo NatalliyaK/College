@@ -1,3 +1,13 @@
+let searchButton = document.querySelector('.search-button');
+let searchInput = document.querySelector('.search-input');
+let phoneBlock = document.querySelector('.tel');
+
+searchButton.addEventListener('click', function() {
+  searchInput.classList.toggle('open');
+  phoneBlock.classList.toggle('open');
+});
+
+//modal
 let modal = document.getElementById('myModal');
 let formBtn = document.getElementsByClassName('formBtn');
 let close = document.getElementsByClassName('close')[0];
@@ -19,20 +29,63 @@ function openModalWindow() {
 function closeModalWindow() {
   modal.style.display = "none";
 }
- //search-field
 
-const formField = document.querySelector('.form-field');
-const searchField = document.querySelector('.search-field');
-const phone = document.querySelector('.header__links-phone');
-const search = document.querySelector('.search');
+//menu
 
-formField.addEventListener('click', () => {
-  searchField.classList.remove('hide')
-  searchField.classList.add('show')
-  phone.classList.toggle('hide')
-  search.classList.toggle('hide')
-})
+const menuBtn = document.querySelector('.menu-btn');
+const menu = document.querySelector('.menu__mob');
+const scrollBody = document.body;
+menuBtn.addEventListener('click', () => {
+  menuBtn.classList.toggle('active');
+  scrollBody.classList.toggle('modal-open');
+});
+
+menuBtn.addEventListener('click', () => {
+  menu.classList.toggle('active');
+  menu.classList.toggle('show');
+});
+window.addEventListener('DOMContentLoaded', () => {
+  const tabsParentSelect = document.querySelector('.js-choice');
+  const tabsContent = document.querySelectorAll('.tabs__content');
+  const sectionSelect = document.querySelector('.select');
+  const requisition = document.querySelector('.requisition');
+  const block = document.querySelector('.requisition__container-image');
+
+  if(sectionSelect) {
+    function hideTabContentSelect () {
+      tabsContent.forEach(item => {
+        item.classList.add('hide');
+        item.classList.remove('show');
+      });
+    }
+
+    function showTabContentSelect(i = 0 ) {
+      tabsContent[i].classList.add('show');
+      tabsContent[i].classList.remove('hide');
+    }
 
 
+    hideTabContentSelect();
+    showTabContentSelect();
 
+    tabsParentSelect.addEventListener('change',(event) => {
+      const value = event.detail.value;
 
+      hideTabContentSelect();
+      showTabContentSelect(value);
+    });
+  }
+
+  if(requisition) {
+    window.addEventListener('scroll', () => {
+      const blockTop = block.getBoundingClientRect().top;
+      const blockBottom = block.getBoundingClientRect().bottom;
+
+      if (blockTop < window.innerHeight && blockBottom > 0) {
+        block.classList.add('opacity');
+      } else {
+        block.classList.remove('opacity');
+      }
+    });
+  }
+});

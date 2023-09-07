@@ -1,51 +1,82 @@
 <header class="header wrapper">
   <div class="header__container">
-    <div class="header__logo">
-      <a href="../main.html" class="header__logo-link">
+    <a href="main.html" class="header__logo">
+      <div class="header__logo-link">
         <img src="./assets/images/logo.svg" class="image-logo" alt="logo">
-      </a>
-      <div class="header__logo-text soar">многопрофильный<br>
+      </div>
+      <div class="header__logo-text soar">
+        <span class="header__logo-link">многопрофильный<br>
         технологический<br>
-        колледж</div>
-    </div>
+        колледж</span>
+      </div>
+    </a>
     <nav class="header__navigation">
       <ul class="header__navigation-list">
-        <li><a href="../main.html" class="header__navigation-item soar">Главная</a></li>
-        <li><a href="../basis.html" class="header__navigation-item soar">Сведения об образовательной<br> организации</a></li>
-        <li><a href="../specialties.html" class="header__navigation-item soar">Специальности</a></li>
-        <li><a href="../student.html" class="header__navigation-item soar">Абитуриенту</a></li>
-        <li><a href="../news.html" class="header__navigation-item soar">Новости</a></li>
-        <li><a href="../contacts.html" class="header__navigation-item soar">Контакты</a></li>
+        <li><a href="main.html" class="header__navigation-item soar">Главная</a></li>
+        <li><a href="basis.html" class="header__navigation-item soar">Сведения об образовательной<br> организации</a></li>
+        <li><a href="specialties.html" class="header__navigation-item soar">Специальности</a></li>
+        <li><a href="student.html" class="header__navigation-item soar">Абитуриенту</a></li>
+        <li><a href="news.html" class="header__navigation-item soar">Новости</a></li>
+        <li><a href="contacts.html" class="header__navigation-item soar">Контакты</a></li>
       </ul>
     </nav>
     <div class="header__links">
-      <div>
-        <a href="tel:+79044907098" class="header__links-phone soar">+7 (904) 490-70-98</a>
+      <div class="header__tel-search">
+        <div class="tel open">
+          <a href="tel:+79044907098" class="header__links-phone soar">+7 (904) 490-70-98</a>
+        </div>
+        <form>
+          <div class="search-container">
+            <input type="text" class="search-input" placeholder="Найти...">
+          </div>
+        </form>
+        <a class="search-button">
+          <svg class="header__svg search">
+            <use href="#header-search"></use>
+          </svg>
+        </a>
       </div>
-      <div>
-        <form class="form-field">
-          <a class="tap-area">
-            <svg class="header__svg search">
+      <a class="tap-area">
+          <svg class="header__svg">
+            <use href="#header-optic"></use>
+          </svg>
+      </a>
+    </div>
+    <div class="menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="menu__mob">
+      <nav class="menu__mob-nav">
+        <ul class="menu__mob-list">
+          <li><a href="basis.html" class="menu__mob-item">Сведения об образовательной организации</a></li>
+          <li><a href="specialties.html" class="menu__mob-item">Специальности</a></li>
+          <li><a href="student.html" class="menu__mob-item">Абитуриенту</a></li>
+          <li><a href="news.html" class="menu__mob-item">Новости</a></li>
+          <li><a href="contacts.html" class="menu__mob-item">Контакты</a></li>
+        </ul>
+      </nav>
+      <form>
+        <div class="menu__mob-search">
+          <input type="text" class="menu__mob-input" placeholder="Найти...">
+          <a>
+            <svg class="header__svg">
               <use href="#header-search"></use>
             </svg>
           </a>
-          <input type="text" class="search-field hide" placeholder="Search...">
-        </form>
-
-      </div>
-
-
-      <div>
-        <a class="tap-area">
+        </div>
+      </form>
+       <div class="menu__mob-optic">
+        <a>
           <svg class="header__svg">
             <use href="#header-optic"></use>
           </svg>
         </a>
+        <span>Режим для слабовидящих</span>
       </div>
-      <div class="menu-btn">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div>
+        <a href="tel:+79044907098"  class="menu__mob-tel">+7 (904) 490-70-98</a>
       </div>
     </div>
   </div>

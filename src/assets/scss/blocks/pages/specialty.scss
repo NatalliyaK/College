@@ -1,0 +1,11 @@
+@import '../../fonts';
+@import '../../mixins';
+@import '../../vars';
+
+.specialty {
+  &__information {
+    @include breakpoint($sm-bp) {
+      flex-direction: column;
+    }
+  }
+}

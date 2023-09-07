@@ -11,7 +11,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     tabs.forEach(elem => {
 
-
       elem.classList.remove('nav-bar__item--active');
     });
   }
@@ -37,4 +36,5 @@ window.addEventListener('DOMContentLoaded', () => {
       })
     }
   });
+
 });

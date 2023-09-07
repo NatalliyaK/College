@@ -1,7 +1,7 @@
- ---
-layout: default
-title: Главная
- ---
+<!-- -&#45;&#45;-->
+<!--layout: default-->
+<!--title: Главная-->
+<!-- -&#45;&#45;-->
 
 <div class="main">
     <section class="about">
@@ -16,21 +16,23 @@ title: Главная
                     <div class="about__form">
                         <div class="about__form-row">
                             <div class="about__form-element">
-                                <input type="text" id="form-control-name" class="form-control form--line">
-                                <label for="form-control-name" class="input__label input__label-name">Имя</label>
+                                <input type="text" id="form-control-name" class="form-control form--line" placeholder="Имя">
                             </div>
                             <div>
-                                <input type="tel" id="form-control-tel" class="form-control form--line">
-                                <label for="form-control-tel" class="input__label input__label-tel">Телефон</label>
+                                <input type="tel" id="form-control-tel" class="form-control form--line" placeholder="Телефон">
                             </div>
                         </div>
-                        <button class="button formBtn">Оставить заявку</button>
+                        <button class="button formBg">Оставить заявку</button>
                     </div>
                     <div class="agree">Нажимая кнопку «Оставить заявку», вы соглашаетесь с Политикой конфиденциальности</div>
                 </div>
             </div>
             <div class="about__image">
-                <img class="about__image-element" src="assets/images/image-head.png" alt="image">
+                <picture>
+                    <source srcset="assets/images/image-head.png" media="(max-width: 1024px)" />
+                    <source srcset="assets/images/image-head-mob.png" media="(max-width: 375px)" />
+                    <img class="about__image-element" src="assets/images/image-head.png" alt="image">
+                </picture>
             </div>
         </div>
     </section>
@@ -117,20 +119,21 @@ title: Главная
                         <div class="swiper-slide"><img src="assets/images/document1.png" alt="Image 1"></div>
                         <div class="swiper-slide"><img src="assets/images/document2.png" alt="Image 2"></div>
                     </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-button-prev">
-                    <button class="arrow">
-                        <svg class="arrow__svg">
-                            <use href="#arrow-left"></use>
-                        </svg>
-                    </button>
-                    </div>
-                    <div class="swiper-button-next">
-                    <button class="arrow">
-                        <svg class="arrow__svg">
-                            <use href="#arrow-right"></use>
-                        </svg>
-                    </button>
+                    <div class="license__button">
+                        <div class="swiper-button-prev">
+                            <button class="arrow">
+                                <svg class="arrow__svg">
+                                    <use href="#arrow-left"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="swiper-button-next">
+                            <button class="arrow">
+                                <svg class="arrow__svg">
+                                    <use href="#arrow-right"></use>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -143,22 +146,28 @@ title: Главная
                 <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus iaculis urna id volutpat lacus. Egestas fringilla phasellus faucibus scelerisque. Elementum eu facilisis sed odio morbi.
                 </p>
             </div>
-            <div>
-                <div class="accreditation__documentation">
-                    <img src="assets/images/document1.png" class="accreditation__image" alt="document" >
-                    <img src="assets/images/document2.png" class="accreditation__image" alt="document">
-                </div>
-                <div class="license__button">
-                    <button class="arrow">
-                        <svg class="arrow__svg">
-                            <use href="#arrow-left"></use>
-                        </svg>
-                    </button>
-                    <button  class="arrow">
-                        <svg class="arrow__svg">
-                            <use href="#arrow-right"></use>
-                        </svg>
-                    </button>
+            <div class="accreditation__slider">
+                <div class="slider swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="assets/images/document1.png" alt="Image 1"></div>
+                        <div class="swiper-slide"><img src="assets/images/document2.png" alt="Image 2"></div>
+                    </div>
+                    <div class="accreditation__button">
+                        <div class="swiper-button-prev">
+                            <button class="arrow">
+                                <svg class="arrow__svg">
+                                    <use href="#arrow-left"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="swiper-button-next">
+                            <button class="arrow">
+                                <svg class="arrow__svg">
+                                    <use href="#arrow-right"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -166,33 +175,49 @@ title: Главная
     <section class="news wrapper">
         <h2 class="title">Новости</h2>
         <div class="news__information">
-            <a href="#">
+            <a href="#" class="news-elem">
                 <div class="news__items">
-                    <img src="assets/images/new.png" class="news__images" alt="image">
+                    <picture>
+                        <source srcset="assets/images/new.png" media="(max-width: 1024px)" />
+                        <source srcset="assets/images/new-mob.png" media="(max-width: 375px)" />
+                        <img src="assets/images/new.png" class="news__images" alt="image">
+                    </picture>
                     <h3 class="news__subtitle">Название новости</h3>
                     <p class="news__text">11.07.2023</p>
                     <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum ex id quam tincidunt dapibus. Phasellus tincidunt, mi eu venenatis bibendum, sapien justo hendrerit velit, ac ultrices metus velit eget tortor.</p>
                 </div>
             </a>
-            <a href="#">
+            <a href="#" class="news-elem">
                 <div class="news__items">
+                <picture>
+                    <source srcset="assets/images/new.png" media="(max-width: 1024px)" />
+                    <source srcset="assets/images/new-mob.png" media="(max-width: 375px)" />
                     <img src="assets/images/new.png" class="news__images" alt="image">
+                </picture>
                     <h3 class="news__subtitle">Название новости</h3>
                     <p class="news__text">11.07.2023</p>
                     <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum ex id quam tincidunt dapibus. Phasellus tincidunt, mi eu venenatis bibendum, sapien justo hendrerit velit, ac ultrices metus velit eget tortor.</p>
                 </div>
             </a>
-            <a href="#">
+            <a href="#" class="news-elem">
                 <div class="news__items">
-                    <img src="assets/images/new.png" class="news__images" alt="image">
+                    <picture>
+                        <source srcset="assets/images/new.png" media="(max-width: 1024px)" />
+                        <source srcset="assets/images/new-mob.png" media="(max-width: 375px)" />
+                        <img src="assets/images/new.png" class="news__images" alt="image">
+                    </picture>
                     <h3 class="news__subtitle">Название новости</h3>
                     <p class="news__text">11.07.2023</p>
                     <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum ex id quam tincidunt dapibus. Phasellus tincidunt, mi eu venenatis bibendum, sapien justo hendrerit velit, ac ultrices metus velit eget tortor.</p>
                 </div>
             </a>
-           <a href="#">
+           <a href="#" class="news-elem">
                <div class="news__items">
-                   <img src="assets/images/new.png" class="news__images" alt="image">
+                   <picture>
+                       <source srcset="assets/images/new.png" media="(max-width: 1024px)" />
+                       <source srcset="assets/images/new-mob.png" media="(max-width: 375px)" />
+                       <img src="assets/images/new.png" class="news__images" alt="image">
+                   </picture>
                    <h3 class="news__subtitle">Название новости</h3>
                    <p class="news__text">11.07.2023</p>
                    <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum ex id quam tincidunt dapibus. Phasellus tincidunt, mi eu venenatis bibendum, sapien justo hendrerit velit, ac ultrices metus velit eget tortor.</p>
@@ -210,12 +235,10 @@ title: Главная
                 <p class="requisition__subtitle subtitle">Оставьте Ваши контакты для получения консультации</p>
                 <div class="requisition__form-row">
                     <div class="requisition__form-element">
-                        <input type="text" id="requisition-control-name" class="requisition-control form--line">
-                        <label for="requisition-control-name" class="input__label requisition__label-name">Имя</label>
+                        <input type="text" id="requisition-control-name" class="requisition-control form--line" placeholder="Имя">
                     </div>
                     <div class="requisition__form-element">
-                        <input type="tel" id="requisition-control-tel" class="requisition-control form--line">
-                        <label for="requisition-control-tel" class="input__label requisition__label-tel">Телефон</label>
+                        <input type="tel" id="requisition-control-tel" class="requisition-control form--line" placeholder="Телефон">
                     </div>
                 </div>
                 <p class="requisition__agree agree agree--black">Нажимая кнопку «Оставить заявку», вы соглашаетесь с Политикой конфиденциальности</p>
@@ -226,6 +249,7 @@ title: Главная
             <img src="assets/images/image-friend.png" class="requisition__image" alt="image">
         </div>
     </section>
+    <div class="requisition__mob wrapper">{{> requisition-form}}</div>
     <section class="contacts wrapper">
         <div class="contacts__container">
             <div class="contacts__information">

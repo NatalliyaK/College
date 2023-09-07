@@ -1,4 +1,6 @@
 @import '../vars';
+@import '../fonts';
+@import '../mixins';
 
 .requisitions {
   &__form {
@@ -12,6 +14,11 @@
     background: $maim-color;
     color: $white;
     border-radius: 2rem;
+    @include breakpoint($xl-bp) {
+      padding: 4rem 2rem;
+      width: 33.5rem;
+      height: 42.5rem;
+    }
   }
 
   &__form-row {
@@ -37,15 +44,25 @@
     right: 32.4rem;
   }
 
-    &-control {
-    background: transparent;
-    width: 40rem;
+  &-control {
+  background: transparent;
+  width: 40rem;
+  height: 2.8rem;
+  font-size: 1.8rem;
+  @include breakpoint($xl-bp) {
+    width: 29.5rem;
+    }
   }
 
   &__title {
     font-weight: 500;
     font-size: 3.2rem;
     line-height: 3.8rem;
+    letter-spacing: 0.05rem;
+    @include breakpoint($xl-bp) {
+      font-size: 2.4rem;
+      line-height: 2.9rem;
+    }
   }
 
   &__label-name {
@@ -62,5 +79,17 @@
 
   &__button {
     padding: 1.2rem 12.2rem;
+    &:hover {
+      color: $white;
+      @include bg-buttonReg;
+    }
+    @include breakpoint($xl-bp) {
+      padding: 1.2rem 7.8rem;
+    }
   }
 }
+
+input:focus + label {
+  display: none;
+}
+

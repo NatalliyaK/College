@@ -1,8 +1,15 @@
+@import '../../vars';
+@import '../../fonts';
+@import '../../mixins';
+
 .new-title__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
     width: 70.5rem;
+    @include breakpoint($xl-bp) {
+        width: 40.5rem;
+    }
 }
 

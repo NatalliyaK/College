@@ -4,14 +4,18 @@
 
 .specialty {
   margin-top: 41.8rem;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     margin-top: 20.8rem;
   }
 
   &__information {
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap;
     justify-content: space-between;
+    @include breakpoint($xl-bp) {
+      justify-content: center;
+    }
     @include breakpoint($sm-bp) {
       flex-direction: column;
     }
@@ -22,8 +26,10 @@
     padding: 3rem;
     border-radius: 1rem;
     width: 56rem;
-    @include breakpoint($sm-bp) {
+    @include breakpoint($xl-bp) {
       padding: 2rem;
+      }
+    @include breakpoint($sm-bp) {
       max-width: 33rem;
     }
   }
@@ -33,15 +39,19 @@
     font-size: 1.8rem;
     line-height: 2.1rem;
     margin-bottom: 1.5rem;
-    @include breakpoint($sm-bp) {
+    @include breakpoint($xl-bp) {
       font-size: 1.6rem;
       line-height: 1.9rem;
+      margin-bottom: 1rem;
     }
   }
 
   &__number {
     padding-bottom: 2rem;
     color: $maim-color;
+    @include breakpoint($xl-bp) {
+      padding-bottom: 1rem;
+    }
   }
 
   &__duration {
@@ -52,9 +62,11 @@
     display: flex;
     justify-content: space-between;
     gap: 2.4rem;
-    @include breakpoint($sm-bp) {
-      flex-direction: column;
+    @include breakpoint($xl-bp) {
       gap: 2rem;
+    }
+    @include breakpoint($xl-bp) {
+      flex-direction: column;
     }
   }
 
