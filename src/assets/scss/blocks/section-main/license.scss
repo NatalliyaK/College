@@ -25,11 +25,11 @@
     overflow: hidden;
     width: 296rem;
     @include breakpoint($xl-bp) {
-      width: 47rem;
+      width: 54rem;
       align-self: center;
     }
     @include breakpoint($sm-bp) {
-      width: 23rem;
+      width: 30rem;
     }
   }
 

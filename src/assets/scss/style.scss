@@ -90,6 +90,9 @@ a {
       overflow-x: scroll;
       width: 41rem;
     }
+    @include breakpoint($sm-bp) {
+      max-width: 30rem;
+    }
   }
   @include breakpoint($xl-bp) {
     max-width: 70rem;
@@ -419,5 +422,15 @@ input {
     display: block;
   }
 }
+
+.molest {
+  position: sticky;
+  top: 20rem;
+  align-self: start;
+  @include breakpoint($sm-bp) {
+    align-self: inherit;
+  }
+}
+
 
 @import 'importsBlocks';

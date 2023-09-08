@@ -3,14 +3,30 @@
 @import '../mixins';
 
 .header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 2s ease;
   &__container {
     display: flex;
     border-bottom: solid 0.2rem $border;
+    background: $white;
     justify-content: space-between;
     position: relative;
+    padding-right: 9rem;
+    padding-left: 9rem;
     @include breakpoint($xl-bp) {
-      padding: 2rem 0;
+      padding: 1rem 0;
     }
+  }
+
+  &--fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
   }
 
   &__logo {
@@ -214,12 +230,17 @@
     align-items: center;
     gap: 0.8rem;
     margin-bottom: 4rem;
+    cursor: pointer;
 
     & span {
       font-weight: 400;
       font-size: 1.6rem;
       line-height: 1.9rem;
       letter-spacing: 0.05rem;
+
+      &:hover {
+        color: $bg-table;
+      }
     }
   }
 
@@ -237,5 +258,4 @@
     margin-bottom: 4rem;
   }
 }
-
 

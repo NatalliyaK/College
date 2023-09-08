@@ -29,6 +29,10 @@
   &__item {
     border-bottom: 0.1rem solid $border;
 
+    & a:hover {
+      color: $maim-color;
+    }
+
     &:last-child {
       border-bottom: none;
     }

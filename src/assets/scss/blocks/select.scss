@@ -21,16 +21,35 @@
   z-index: 2;
   background: transparent;
   border: none;
-  border-bottom: 0.2rem solid $maim-color;
+  min-height: auto;
 
-  &--active,
-  &:hover {
+  &--active{
     border-bottom: 0.2rem solid $maim-color;
     color: $maim-color;
+    transition: all 5s ease;
   }
 }
 
-.choices__list--dropdown {
+.is-open .choices__item .choices__item--selectable {
+  border-bottom: 0.2rem solid transparent;
+}
+
+.is-open .choices__item {
+  min-height: auto;
+}
+
+.is-open .choices__inner {
+  border-bottom: 0.2rem transparent solid;
+  min-height: auto;
+}
+
+.is-open .choices__inner:hover {
+  border-bottom: 0.2rem solid $maim-color;
+  color: $maim-color;
+  transition: all 5s ease;
+}
+
+.is-open .choices__list--dropdown {
   border: none;
 }
 
@@ -38,10 +57,13 @@
   border-bottom: 0.2rem solid $maim-color;
 }
 
-
 .choices__list--dropdown .choices__item--selectable:hover {
   border-bottom: 0.2rem solid $maim-color;
   color: $maim-color;
+}
+
+.choices__list--dropdown {
+  background: $border;
 }
 
 .choices__item--selectable[aria-selected="true"] {

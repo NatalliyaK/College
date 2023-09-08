@@ -51,7 +51,36 @@ window.addEventListener('DOMContentLoaded', () => {
   const requisition = document.querySelector('.requisition');
   const block = document.querySelector('.requisition__container-image');
 
-  if(sectionSelect) {
+  const header = document.querySelector('.header');
+
+  const news = document.querySelector('.section_news');
+
+    // if(header) {
+    //   window.onscroll = function() {
+    //     let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+    //     if(scrolled >500){
+    //
+    //       document.querySelector('.header').style.opacity = '0';
+    //     }else{
+    //
+    //       document.querySelector('.header').style.opacity = '1';
+    //     }
+    //   };
+    // }
+
+    if(news) {
+      const btn = document.querySelector('.showMore');
+      const item = document.querySelector('.news__items');
+
+      btn.addEventListener('click', function(e) {
+          e.preventDefault();
+        let newDiv = document.createElement('div');
+        newDiv.innerHTML =item.innerHTML;
+        document.body.appendChild(newDiv);
+        });
+    }
+
+    if(sectionSelect) {
     function hideTabContentSelect () {
       tabsContent.forEach(item => {
         item.classList.add('hide');

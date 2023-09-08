@@ -5,10 +5,12 @@
 
 .basis {
   &__container {
+    //margin-top: 12rem;
     display: flex;
     padding-top: 8rem;
     gap: 2rem;
     @include breakpoint($xl-bp) {
+      //margin-top: 7rem;
       padding-top: 4rem;
     }
     @include breakpoint($sm-bp) {

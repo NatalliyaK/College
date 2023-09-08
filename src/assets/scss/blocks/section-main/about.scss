@@ -103,17 +103,11 @@
   &__image {
     position: relative;
     top: 3rem;
-    overflow: hidden;
-    display: block;
     border-radius: 2rem;
     &-element {
       height: 51.7rem;
       width: 172rem;
-      transition: all 0.4s linear;
-      transform-origin: center;
-      &:hover {
-        transform: scale(1.1);
-      }
+
       @include breakpoint($xl-bp) {
         height: 21.7rem;
         width: 70rem;
@@ -121,9 +115,23 @@
       @include breakpoint($sm-bp) {
         height: 23.8rem;
         width: 33.5rem;
-    }
+      }
     }
   }
+  //
+  //&__image--animation {
+  //  overflow: hidden;
+  //  display: block;
+  //
+  //    }
+  //&__image-element--animation {
+  //    transition: all 0.4s linear;
+  //    transform-origin: center;
+  //    &:hover {
+  //      transform: scale(1.1);
+  //    }
+  //  }
+
 }
 
 .form-control {
