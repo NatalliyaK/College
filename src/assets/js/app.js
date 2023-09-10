@@ -7,27 +7,44 @@ searchButton.addEventListener('click', function() {
   phoneBlock.classList.toggle('open');
 });
 
-//modal
-let modal = document.getElementById('myModal');
-let formBtn = document.getElementsByClassName('formBtn');
-let close = document.getElementsByClassName('close')[0];
+function showSuccessModal () {
+  let modal = document.getElementById('myModal');
+  let close = document.getElementsByClassName('close')[0];
 
-for (let i = 0; i < formBtn.length; i++) {
-  formBtn[i].addEventListener('click', function() {
-    openModalWindow();
+  function openModalWindow() {
+    modal.style.display = "block";
+  }
+
+  function closeModalWindow() {
+    modal.style.display = "none";
+  }
+
+  close.addEventListener('click', function() {
+    closeModalWindow();
   })
+
+  openModalWindow();
 }
 
-close.addEventListener('click', function() {
-  closeModalWindow();
-})
+function handleForm (form) {
+  form.addEventListener('submit', function(event) {
+    console.log(form);
 
-function openModalWindow() {
-  modal.style.display = "block";
-}
+    let controls = this.querySelectorAll('.formInput');
+    let isValid = true;
+    controls.forEach(control => {
+      control.classList.remove('invalid-control');
+      if (control.classList.contains('required') && !control.value) {
+        control.classList.add('invalid-control');
+        isValid = false;
+      }
+    });
+    event.preventDefault();
 
-function closeModalWindow() {
-  modal.style.display = "none";
+    if (isValid) {
+      showSuccessModal();
+    }
+  });
 }
 
 //menu
@@ -44,43 +61,32 @@ menuBtn.addEventListener('click', () => {
   menu.classList.toggle('active');
   menu.classList.toggle('show');
 });
+
+
 window.addEventListener('DOMContentLoaded', () => {
   const tabsParentSelect = document.querySelector('.js-choice');
   const tabsContent = document.querySelectorAll('.tabs__content');
   const sectionSelect = document.querySelector('.select');
   const requisition = document.querySelector('.requisition');
   const block = document.querySelector('.requisition__container-image');
+  const form = document.querySelector('.about__form');
+  const requisitionForm = document.querySelector('.requisition__form');
+  const reqForm = document.querySelector('.requisitions__form');
+  const newsInformationList = document.querySelector('.news__information-list');
 
-  const header = document.querySelector('.header');
+  if(form) {
+    handleForm(form);
+  }
 
-  const news = document.querySelector('.section_news');
+  if(requisitionForm) {
+    handleForm(requisitionForm);
+  }
 
-    // if(header) {
-    //   window.onscroll = function() {
-    //     let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-    //     if(scrolled >500){
-    //
-    //       document.querySelector('.header').style.opacity = '0';
-    //     }else{
-    //
-    //       document.querySelector('.header').style.opacity = '1';
-    //     }
-    //   };
-    // }
+  if(reqForm) {
+    handleForm(reqForm);
+  }
 
-    if(news) {
-      const btn = document.querySelector('.showMore');
-      const item = document.querySelector('.news__items');
-
-      btn.addEventListener('click', function(e) {
-          e.preventDefault();
-        let newDiv = document.createElement('div');
-        newDiv.innerHTML =item.innerHTML;
-        document.body.appendChild(newDiv);
-        });
-    }
-
-    if(sectionSelect) {
+  if(sectionSelect) {
     function hideTabContentSelect () {
       tabsContent.forEach(item => {
         item.classList.add('hide');
@@ -116,5 +122,19 @@ window.addEventListener('DOMContentLoaded', () => {
         block.classList.remove('opacity');
       }
     });
+  }
+
+  const newsItems = document.querySelector('.news__items');
+
+  if(newsItems) {
+    const showMore = document.querySelector('.showMore');
+
+    showMore.addEventListener('click', function () {
+      let parent = newsItems.parentNode;
+      for( let a = 0; a < 12; a++) {
+        let clone = newsItems.cloneNode(true);
+        parent.appendChild(clone);
+      }
+    })
   }
 });

@@ -60,9 +60,23 @@ a {
   text-decoration: none;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .form-control {
   color: white;
   height: auto;
+}
+
+.invalid-control {
+  border-color: red !important;
+}
+
+.form-control {
+  border: 0.1rem solid;
 }
 
 .form-control:focus + .input__label {
@@ -194,9 +208,12 @@ a {
   width: 30px;
   height: 30px;
   position: absolute;
-  right: 0;
+  right: 1.5rem;
   top: 30%;
   z-index: 200;
+  @include breakpoint($sm-bp) {
+    right: 1rem;
+  }
 
   & span {
     width: 21px;
@@ -262,9 +279,6 @@ a {
   @include breakpoint($xl-bp) {
     font-size: 1.6rem;
     line-height: 1.93rem;
-  }
-  @include breakpoint($sm-bp) {
-
   }
 }
 

@@ -23,10 +23,10 @@
     line-height: 2.42rem;
     margin: 1.5rem 0;
     letter-spacing: 0.05rem;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
+    //overflow: hidden;
+    //display: -webkit-box;
+    //-webkit-line-clamp: 1;
+    //-webkit-box-orient: vertical;
     border-bottom: 0.2rem transparent solid;
     &:hover {
       border-bottom: 0.2rem solid $maim-color;
@@ -58,14 +58,15 @@
   }
 
   &-elem {
-    height: 52rem;
+    height: 55rem;
     width: 41rem;
     position: relative;
+    overflow: hidden;
     &:hover .tooltip {
       opacity: 1;
     }
     @include breakpoint($xl-bp) {
-      height: 44rem;
+      height: 45rem;
       width: 33.5rem;
     }
   }

@@ -17,7 +17,10 @@
     padding-right: 9rem;
     padding-left: 9rem;
     @include breakpoint($xl-bp) {
-      padding: 1rem 0;
+      padding: 1rem 2.5rem;
+    }
+    @include breakpoint($sm-bp) {
+      padding: 1rem 1rem;
     }
   }
 
@@ -47,7 +50,7 @@
     margin-left: -1.5rem;
     text-align: center;
     @include breakpoint($xl-bp) {
-      font-size: 1rem;
+      font-size: 1.4rem;
       line-height: 1.2rem;
       margin-left: -1rem;
     }
@@ -193,7 +196,7 @@
   background: $white;
   transition: all 0.5s ease-in-out;
   z-index: 100;
-  padding: 2.3rem 2rem;
+  padding: 2.3rem 1.5rem;
 
   &.active {
     right: 0;
@@ -214,7 +217,7 @@
   }
 
   &-nav {
-    margin: 6rem 0 4rem 0;
+    margin: 6rem 0 3rem 0;
   }
 
   &-tel {
@@ -229,7 +232,7 @@
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     cursor: pointer;
 
     & span {
@@ -255,7 +258,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 }
 

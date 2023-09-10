@@ -49,6 +49,7 @@
   width: 40rem;
   height: 2.8rem;
   font-size: 1.8rem;
+    color: $white;
   @include breakpoint($xl-bp) {
     width: 29.5rem;
     }
