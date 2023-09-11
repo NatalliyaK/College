@@ -12,11 +12,11 @@ function showSuccessModal () {
   let close = document.getElementsByClassName('close')[0];
 
   function openModalWindow() {
-    modal.style.display = "block";
+    modal.style.display = 'block';
   }
 
   function closeModalWindow() {
-    modal.style.display = "none";
+    modal.style.display = 'none';
   }
 
   close.addEventListener('click', function() {
@@ -28,7 +28,6 @@ function showSuccessModal () {
 
 function handleForm (form) {
   form.addEventListener('submit', function(event) {
-    console.log(form);
 
     let controls = this.querySelectorAll('.formInput');
     let isValid = true;
@@ -43,6 +42,9 @@ function handleForm (form) {
 
     if (isValid) {
       showSuccessModal();
+      controls.forEach(control => {
+        control.value = '';
+      });
     }
   });
 }
@@ -73,6 +75,19 @@ window.addEventListener('DOMContentLoaded', () => {
   const requisitionForm = document.querySelector('.requisition__form');
   const reqForm = document.querySelector('.requisitions__form');
   const newsInformationList = document.querySelector('.news__information-list');
+  const header = document.querySelector('.header');
+
+  if(header) {
+    window.onscroll = function() {
+      let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+      let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      if(scrolled > windowHeight / 2){
+        document.querySelector('.header').style.opacity = '0';
+      } else {
+        document.querySelector('.header').style.opacity = '1';
+      }
+    };
+  }
 
   if(form) {
     handleForm(form);

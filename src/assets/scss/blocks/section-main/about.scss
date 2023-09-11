@@ -118,19 +118,26 @@
       }
     }
   }
-  //
-  //&__image--animation {
-  //  overflow: hidden;
-  //  display: block;
-  //
-  //    }
-  //&__image-element--animation {
-  //    transition: all 0.4s linear;
-  //    transform-origin: center;
-  //    &:hover {
-  //      transform: scale(1.1);
-  //    }
-  //  }
+
+  &__image--animation {
+    overflow: hidden;
+    display: block;
+    }
+
+  &__image-element--animation {
+      transition: all 0.4s linear;
+      transform-origin: center;
+    @include breakpoint($sm-bp) {
+      transition: none;
+      transform-origin: center;
+    }
+      &:hover {
+        transform: scale(1.1);
+        @include breakpoint($sm-bp) {
+          transform: none;
+        }
+      }
+    }
 
 }
 

@@ -30,6 +30,11 @@
   }
 }
 
+.choices__list--single {
+  padding-left: 1rem;
+  padding-right: 1.7rem;
+}
+
 .is-open .choices__item .choices__item--selectable {
   border-bottom: 0.2rem solid transparent;
 }

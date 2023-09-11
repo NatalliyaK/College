@@ -33,6 +33,37 @@ html {
   overflow-y: scroll;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-bottom: 0.1rem solid $border;
+  -webkit-text-fill-color: $white;
+  -webkit-box-shadow: 0 0 0 1000px $maim-color inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#requisition-control-name:-webkit-autofill,
+#requisition-control-name:-webkit-autofill:hover,
+#requisition-control-name:-webkit-autofill:focus,
+#requisition-control-name:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  color: black !important;
+  -webkit-text-fill-color: black !important;
+}
+
+#requisition-control-tel:-webkit-autofill,
+#requisition-control-tel:-webkit-autofill:hover,
+#requisition-control-tel:-webkit-autofill:focus,
+#requisition-control-tel:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
 .menu-open {
   overflow: hidden;
 }

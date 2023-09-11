@@ -1,5 +1,6 @@
 @import '../vars';
 @import '../fonts';
+@import '../mixins';
 
 .footer {
   margin-top: 16rem;
@@ -24,7 +25,7 @@
       margin-top: 1.3rem;
       margin-left: -1.5rem;
       @include breakpoint($xl-bp) {
-        font-size: 1rem;
+        font-size: 1.4rem;
         line-height: 1.2rem;
         margin-top: 0;
         margin-left: -0.5rem;
@@ -36,13 +37,23 @@
     }
   }
 
+  &__institutions {
+    display: flex;
+    gap: 16.3rem;
+    justify-content: space-between;
+    @include breakpoint($xl-bp) {
+      gap: 2rem;
+      flex-direction: column;
+    }
+  }
+
   &__container {
     display: flex;
     gap: 16.3rem;
     border-top: solid 0.2rem $border;
     padding: 2rem 0 4rem;
     @include breakpoint($xl-bp) {
-      gap: 1.5rem;
+      gap: 2.5rem;
     }
     @include breakpoint($sm-bp) {
       flex-direction: column;
@@ -75,7 +86,7 @@
     color: $black;
     letter-spacing: 0.05rem;
     @include breakpoint($xl-bp) {
-      font-size: 1rem;
+      font-size: 1.5rem;
       line-height: 1.93rem;
     }
     @include breakpoint($sm-bp) {

@@ -25,6 +25,7 @@
     flex-direction: row-reverse;
     @include breakpoint($xl-bp) {
       width: 75%;
+      margin: 40% auto;
     }
     @include breakpoint($sm-bp) {
       padding: 2rem;

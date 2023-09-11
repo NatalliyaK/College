@@ -15,6 +15,9 @@
     padding: 1.5rem 0;
     border-bottom: 0.1rem solid $border;
     cursor: pointer;
+    & a:hover {
+      color: #554a9d;
+    }
 
     &:last-child {
       border-bottom: none;
