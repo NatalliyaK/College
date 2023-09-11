@@ -472,8 +472,8 @@ input {
   position: sticky;
   top: 20rem;
   align-self: start;
-  @include breakpoint($sm-bp) {
-    align-self: inherit;
+  @include breakpoint($xl-bp) {
+    align-self: auto;
   }
 }
 

@@ -23,10 +23,6 @@
     line-height: 2.42rem;
     margin: 1.5rem 0;
     letter-spacing: 0.05rem;
-    //overflow: hidden;
-    //display: -webkit-box;
-    //-webkit-line-clamp: 1;
-    //-webkit-box-orient: vertical;
     border-bottom: 0.2rem transparent solid;
     &:hover {
       border-bottom: 0.2rem solid $maim-color;
@@ -71,6 +67,27 @@
     }
   }
 
+  &__image--animation {
+    overflow: hidden;
+    display: block;
+    border-radius: 0.2rem;
+  }
+
+  &__image-element--animation {
+    transition: all 0.4s linear;
+    transform-origin: center;
+    @include breakpoint($sm-bp) {
+      transition: none;
+      transform-origin: center;
+    }
+    &:hover {
+      transform: scale(1.1);
+      @include breakpoint($sm-bp) {
+        transform: none;
+      }
+    }
+  }
+
   &__images {
     width: 100%;
   }
@@ -106,15 +123,6 @@
       width: 100%;
     }
   }
-}
-
-.news__images {
-  transition: transform 0.3s ease-in-out;
-  overflow: hidden;
-}
-
-.news__items:hover .news__images {
-  transform: scale(1.03);
 }
 
 .button.button--purple.button--white {
