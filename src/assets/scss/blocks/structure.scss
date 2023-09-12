@@ -1,9 +1,10 @@
 @import '../vars';
+@import '../mixins';
 
 .structure {
-  width: 70rem;
+  width: 85rem;
   @include breakpoint($xl-bp) {
-    width: 40rem;
+    width: 49rem;
   }
   @include breakpoint($sm-bp) {
     width: 33.5rem;

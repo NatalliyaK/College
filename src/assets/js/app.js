@@ -139,7 +139,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const newsItems = document.querySelector('.news__items');
+  const newsItems = document.querySelector('.news-element');
 
   if(newsItems) {
     const showMore = document.querySelector('.showMore');
