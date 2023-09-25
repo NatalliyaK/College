@@ -1,0 +1,44 @@
+@import "../vars";
+
+#toTop {
+  position: fixed;
+  display: inline-block;
+  bottom: 3rem;
+  right: -4rem;
+  width: 4rem;
+  height: 4rem;
+  z-index: 1000;
+  cursor: pointer;
+  text-align: center;
+  color: $white;
+  border-radius: 0.4rem;
+  background: $maim-color;
+  box-shadow: 0 0 0 0.3rem rgba(0,0,0,.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    background: $maim-color;
+  }
+
+  & svg {
+    position: relative;
+    top: 1.2rem;
+    right: -0.1rem;
+    fill: $white;
+    transition: all .3s ease-in-out;
+  }
+
+  &:hover svg {
+    cursor: pointer;
+    fill: $white;
+    transition: all .3s ease-in-out;
+  }
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    right: calc(2%);
+  }
+}

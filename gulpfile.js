@@ -37,7 +37,7 @@ const path = {
     fonts: srcPath + "assets/fonts//*.{eot,woff,woff2,ttf,svg}",
   },
   watch: {
-    html: srcPath + "/*.html",
+    html: srcPath + "**/*.html",
     js: srcPath + "assets/js/**/*.js",
     css: srcPath + "assets/scss/**/*.scss",
     images:

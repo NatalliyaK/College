@@ -7,6 +7,32 @@ searchButton.addEventListener('click', function() {
   phoneBlock.classList.toggle('open');
 });
 
+function scrollTo(to, duration = 500) {
+  const
+      element = document.scrollingElement || document.documentElement,
+      start = element.scrollTop,
+      change = to - start,
+      startDate = +new Date(),
+      easeInOutQuad = function (t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+      },
+      animateScroll = function () {
+        const currentDate = +new Date();
+        const currentTime = currentDate - startDate;
+        element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
+        if (currentTime < duration) {
+          requestAnimationFrame(animateScroll);
+        }
+        else {
+          element.scrollTop = to;
+        }
+      };
+  animateScroll();
+}
+
 function showSuccessModal () {
   let modal = document.getElementById('myModal');
   let close = document.getElementsByClassName('close')[0];
@@ -28,7 +54,7 @@ function showSuccessModal () {
 
 function handleForm (form) {
   form.addEventListener('submit', function(event) {
-
+console.log(1)
     let controls = this.querySelectorAll('.formInput');
     let isValid = true;
     controls.forEach(control => {
@@ -44,6 +70,7 @@ function handleForm (form) {
       showSuccessModal();
       controls.forEach(control => {
         control.value = '';
+        control.checked = false;
       });
     }
   });
@@ -66,6 +93,7 @@ menuBtn.addEventListener('click', () => {
 
 
 window.addEventListener('DOMContentLoaded', () => {
+  let btn = document.querySelector('#toTop');
   const tabsParentSelect = document.querySelector('.js-choice');
   const tabsContent = document.querySelectorAll('.tabs__content');
   const sectionSelect = document.querySelector('.select');
@@ -73,9 +101,25 @@ window.addEventListener('DOMContentLoaded', () => {
   const block = document.querySelector('.requisition__container-image');
   const form = document.querySelector('.about__form');
   const requisitionForm = document.querySelector('.requisition__form');
-  const reqForm = document.querySelector('.requisitions__form');
+  const reqForms = document.querySelectorAll('.requisitions__form');
   const newsInformationList = document.querySelector('.news__information-list');
   const header = document.querySelector('.header');
+
+  window.addEventListener('scroll', function () {
+    // Если прокрутили дальше 599px, показываем кнопку
+    if (pageYOffset > 100) {
+      btn.classList.add('show');
+      // Иначе прячем
+    } else {
+      btn.classList.remove('show');
+    }
+  });
+
+
+  btn.onclick = function (click) {
+    click.preventDefault();
+    scrollTo(0, 400);
+  }
 
   if(header) {
     window.onscroll = function() {
@@ -97,8 +141,8 @@ window.addEventListener('DOMContentLoaded', () => {
     handleForm(requisitionForm);
   }
 
-  if(reqForm) {
-    handleForm(reqForm);
+  if(reqForms.length > 0) {
+    reqForms.forEach(form => handleForm(form));
   }
 
   if(sectionSelect) {
