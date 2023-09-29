@@ -37,10 +37,29 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin-right: 7.8rem;
+    margin-right: 6.8rem;
     @include breakpoint($sm-bp) {
-      margin-right: 4.8rem;
+      margin-right: 2.8rem;
     }
+  }
+
+  &__account {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 1rem;
+  }
+
+  &__account-mob {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__account-item {
+    width: 2.4rem;
+    height: 2.4rem;
   }
 
   &__logo-text {
@@ -57,7 +76,17 @@
   }
 
   &__navigation {
-    margin: 3.9rem 11.6rem 3.9rem 0;
+    margin: 4.9rem 3.9rem 0 0;
+    @include breakpoint($xl-bp) {
+      display: none;
+    }
+  }
+
+  &__block-link {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 3rem 0 1.5rem;
     @include breakpoint($xl-bp) {
       display: none;
     }
@@ -66,7 +95,7 @@
   &__navigation-list {
     text-align: center;
     display: flex;
-    gap: 4.09rem;
+    gap: 3rem;
     align-items: center;
   }
 
@@ -75,6 +104,15 @@
     color: $black;
     text-align: center;
     line-height: 2.1rem;
+  }
+
+  &__account-link {
+    display: flex;
+    align-items: center;
+
+    & span {
+      vertical-align: middle;
+    }
   }
 
   &__links {
@@ -167,7 +205,6 @@
 .tap-area {
   position: absolute;
   right: 0;
-  top: 38%;
   cursor: pointer;
   @include breakpoint($xl-bp) {
     display: none;
