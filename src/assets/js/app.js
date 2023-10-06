@@ -104,6 +104,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const reqForms = document.querySelectorAll('.requisitions__form');
   const newsInformationList = document.querySelector('.news__information-list');
   const header = document.querySelector('.header');
+  const speciality = document.querySelector('.top');
 
   window.addEventListener('scroll', function () {
     // Если прокрутили дальше 599px, показываем кнопку
@@ -122,15 +123,60 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   if(header) {
-    window.onscroll = function() {
+    window.onscroll = function () {
       let scrolled = window.pageYOffset || document.documentElement.scrollTop;
       let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      if(scrolled > windowHeight / 2){
+      if (scrolled > windowHeight / 2) {
         document.querySelector('.header').style.opacity = '0';
       } else {
         document.querySelector('.header').style.opacity = '1';
       }
     };
+
+//перебираем контент карточек
+
+    const specialtyTabs = document.querySelectorAll('.specialty-tab');
+    const a = document.querySelector('.a');
+
+    function hideTabSpecialties() {
+      specialtyTabs.forEach(el => {
+        el.style.display = 'none';
+      });
+    }
+
+//перебираем карточки на главной
+    const specialty = document.querySelectorAll('.cardItem');
+
+    specialty.forEach((el,index) => {
+      el.addEventListener('click', () => {
+        specialtyTabs.forEach(el => {
+          el.style.display = 'none';
+        });
+        const title = el.querySelector('.specialty__subtitle')
+        const titleCard = title.textContent
+        localStorage.setItem('title', titleCard);
+        localStorage.setItem('index', index);
+      })
+
+    })
+    const titleOneCard = document.querySelector('.titleCardItem');
+    const storedTitle = localStorage.getItem('title');
+    const storedIndex = localStorage.getItem('index');
+
+    if(specialtyTabs) {
+      hideTabSpecialties();
+      specialtyTabs.forEach((el, index) => {
+        if(index == storedIndex) {
+          el.style.display = 'block';
+          titleOneCard.classList.add('red');
+        }
+      })
+    }
+    if (titleOneCard && storedTitle) {
+      titleOneCard.textContent = storedTitle;
+    }
+
+    localStorage.clear();
   }
 
   if(form) {
